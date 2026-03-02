@@ -1,0 +1,200 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-50: #f5f3ff;
+  --color-primary-100: #ede9fe;
+  --color-primary-500: #8b5cf6;
+  --color-primary-600: #7c3aed;
+  --color-primary-400: #a78bfa;
+
+  --color-dark-bg: #0f0720;
+  --color-dark-surface: #1a0b2e;
+  --color-dark-border: #31214a;
+
+  --font-geom: "Georama", sans-serif;
+
+  --animate-gradient: gradient 8s linear infinite;
+  --animate-float: float 6s ease-in-out infinite;
+
+  @keyframes gradient {
+
+    0%,
+    100% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+
+  @keyframes float {
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  @keyframes sweep {
+    0% {
+      transform: translateX(-100%) translateY(-100%) rotate(-45deg);
+    }
+
+    100% {
+      transform: translateX(200%) translateY(200%) rotate(-45deg);
+    }
+  }
+
+  @keyframes pulse-ring {
+    0% {
+      transform: scale(0.95);
+    }
+
+    50% {
+      transform: scale(1.05);
+    }
+
+    100% {
+      transform: scale(0.95);
+    }
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-dark-bg text-purple-100 font-geom selection:bg-primary-500/30;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/5 backdrop-blur-lg border border-white/10;
+  }
+
+  .glass-dark {
+    @apply bg-black/40 backdrop-blur-xl border border-white/5;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-linear-to-tl from-purple-600 to-indigo-500;
+  }
+
+  .bg-gradient-premium {
+    @apply bg-linear-to-br from-dark-bg via-[#1a0b3c] to-[#05020a];
+  }
+
+  .header-gradient {
+    @apply bg-linear-to-tl from-purple-600 to-indigo-500;
+  }
+
+  /* 3D Carousel Styles */
+  .carousel {
+    position: relative;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .carousel__body {
+    width: 100%;
+    padding: 20px 0 50px 0;
+    overflow: hidden;
+  }
+
+  .carousel__slider {
+    position: relative;
+    transition: transform 1s ease-in-out;
+    background: transparent;
+    display: flex;
+    transform-style: preserve-3d;
+  }
+
+  .carousel__slider__item {
+    position: relative;
+    display: block;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    margin: 0 20px;
+  }
+
+  .item__3d-frame {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s ease-in-out;
+    transform-style: preserve-3d;
+  }
+
+  .item__3d-frame:after {
+    content: '';
+    position: absolute;
+    bottom: -15%;
+    width: 100%;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.2);
+    transform: rotateX(90deg) translate3d(0px, -20px, 0px);
+    opacity: 0.85;
+  }
+
+  .item__3d-frame__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border: 3px solid var(--color-primary-600);
+    background: var(--color-dark-surface);
+    border-radius: 4px;
+  }
+
+  .item__3d-frame__box--left,
+  .item__3d-frame__box--right {
+    top: 0;
+    width: 40px;
+    backface-visibility: hidden;
+    background: #120624;
+  }
+
+  .item__3d-frame__box--left {
+    left: 0;
+    border-left-width: 5px;
+    transform: translate3d(1px, 0, -40px) rotateY(-90deg);
+    transform-origin: 0%;
+  }
+
+  .item__3d-frame__box--right {
+    right: 0;
+    border-right-width: 5px;
+    transform: translate3d(-1px, 0, -40px) rotateY(90deg);
+    transform-origin: 100%;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-dark-bg;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-700 rounded-full border-4 border-dark-bg hover:bg-slate-600;
+}
+
+/* Skills Grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1.5rem;
+}
