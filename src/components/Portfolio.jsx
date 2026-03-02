@@ -49,26 +49,37 @@ const Portfolio = () => {
   // Pre-calculate header parallax
   const headerY = useTransform(scrollYProgress, [0, 1], [50, -50]);
 
-  // GitHub Data Fetching
+  // GitHub Data Fetching (Live Site Screenshot Engine)
   useEffect(() => {
     const fetchRepos = async () => {
       try {
         const response = await fetch(
-          "https://api.github.com/users/CoderGUY47/repos?sort=updated&per_page=10",
+          "https://api.github.com/users/CoderGUY47/repos?sort=updated&per_page=100",
         );
         const data = await response.json();
 
         if (Array.isArray(data)) {
-          const formattedRepos = data
-            .filter((repo) => repo.name !== "myPortfolio")
-            .map((repo) => ({
+          // ⚡ FILTER: Only projects with a live GitHub Pages link
+          const liveRepos = data.filter(
+            (repo) =>
+              repo.name !== "myPortfolio" &&
+              repo.homepage &&
+              repo.homepage.includes("coderguy47.github.io"),
+          );
+
+          const formattedRepos = liveRepos.map((repo) => {
+            // 📡 MICROLINK SCREENSHOT ENGINE: Captures the real website design
+            const screenshotUrl = `https://api.microlink.io/?url=${encodeURIComponent(repo.homepage)}&screenshot=true&embed=screenshot.url&meta=false&overlay.browser=dark`;
+
+            return {
               title: repo.name.replace(/[-_]/g, " "),
-              category: repo.language || "Repository",
-              image: `https://opengraph.githubassets.com/1/CoderGUY47/${repo.name}`,
+              category: repo.language || "Live Site",
+              image: screenshotUrl,
               link: repo.html_url,
               homepage: repo.homepage,
               description: repo.description,
-            }));
+            };
+          });
 
           if (formattedRepos.length > 0) {
             setProjects(formattedRepos);
@@ -234,11 +245,18 @@ const Portfolio = () => {
                         transform: `perspective(1200px) rotateY(${rotation}deg)`,
                       }}
                     >
-                      <div className="item__3d-frame__box item__3d-frame__box--front group overflow-hidden">
+                      <div className="item__3d-frame__box item__3d-frame__box--front group overflow-hidden bg-slate-900/40">
+                        {/* 🌀 BLURRED BACKDROP (The 'Cool' Effect) */}
+                        <img
+                          src={project.image}
+                          alt=""
+                          className="absolute inset-0 w-full h-full object-cover opacity-40 blur-2xl scale-125 transition-transform duration-1000 group-hover:scale-150"
+                        />
+                        {/* 🖼️ MAIN IMAGE (Contained) */}
                         <img
                           src={project.image}
                           alt={project.title}
-                          className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-1000"
+                          className="absolute inset-0 w-full h-full object-contain opacity-90 group-hover:scale-105 transition-transform duration-1000 z-10"
                         />
                         <div className="absolute inset-0 bg-linear-to-t from-dark-bg/90 via-dark-bg/40 to-transparent"></div>
                         <div className="relative z-10 text-center p-6 bg-dark-bg/60 backdrop-blur-md w-full mt-auto border-t border-white/5">
