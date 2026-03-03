@@ -59,12 +59,12 @@ const Experience = () => {
         className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-indigo-600/5 blur-[120px] rounded-full pointer-events-none"
       ></motion.div>
 
-      <div className="w-[90%] md:w-[80%] mx-auto px-6 relative z-10">
-        <div className="text-center mb-24">
-          <span className="text-primary-400 font-black tracking-[0.4em] text-[10px] uppercase bg-primary-950/30 px-6 py-2 rounded-full border border-primary-500/20">
+      <div className="w-[90%] md:w-[70%] mx-auto px-6 relative z-10">
+        <div className="text-center mb-16">
+          <span className="text-primary-400 font-bold tracking-[0.3em] text-[9px] uppercase bg-primary-950/30 px-5 py-1.5 rounded-full border border-primary-500/20">
             Professional Path
           </span>
-          <h2 className="text-5xl md:text-6xl font-black mt-8 uppercase tracking-tighter">
+          <h2 className="text-3xl md:text-4xl font-black mt-6 uppercase tracking-tighter">
             Work <span className="text-gradient">Experience</span>
           </h2>
         </div>
@@ -106,7 +106,7 @@ const Experience = () => {
                   {/* Content Module */}
                   <div className="w-full md:w-[45%]">
                     <div
-                      className={`glass p-10 rounded-4xl border border-white/5 hover:border-primary-500/30 transition-all duration-500 group relative overflow-hidden shadow-2xl ${isEven ? "md:text-right" : "md:text-left"} text-left`}
+                      className={`glass p-8 rounded-3xl border border-white/5 hover:border-primary-500/30 transition-all duration-500 group relative overflow-hidden shadow-xl ${isEven ? "md:text-right" : "md:text-left"} text-left`}
                     >
                       {/* Hover Gradient Bloop */}
                       <div
@@ -114,31 +114,31 @@ const Experience = () => {
                       ></div>
 
                       <div
-                        className={`flex items-center gap-6 mb-8 ${isEven ? "md:flex-row-reverse" : ""}`}
+                        className={`flex items-center gap-5 mb-6 ${isEven ? "md:flex-row-reverse" : ""}`}
                       >
                         <div
-                          className={`shrink-0 w-16 md:w-20 h-16 md:h-20 rounded-2xl md:rounded-3xl flex items-center justify-center text-2xl md:text-3xl bg-linear-to-br ${exp.color} text-white shadow-2xl transform transition-transform duration-500 group-hover:rotate-12`}
+                          className={`shrink-0 w-12 h-12 md:w-14 md:h-14 rounded-xl flex items-center justify-center text-xl md:text-2xl bg-linear-to-br ${exp.color} text-white shadow-lg transform transition-transform duration-500 group-hover:rotate-12`}
                         >
                           <i className={exp.icon}></i>
                         </div>
-                        <div className="space-y-1">
-                          <span className="text-primary-400 font-black text-[10px] md:text-xs uppercase tracking-widest">
+                        <div className="space-y-0.5">
+                          <span className="text-primary-400 font-bold text-[9px] uppercase tracking-widest">
                             {exp.year}
                           </span>
-                          <h3 className="text-2xl md:text-3xl font-black text-white">
+                          <h3 className="text-lg md:text-xl font-black text-white">
                             {exp.title}
                           </h3>
                         </div>
                       </div>
 
                       <p
-                        className={`text-indigo-300 font-bold mb-6 uppercase tracking-widest text-[10px] flex items-center gap-3 ${isEven ? "md:flex-row-reverse" : ""}`}
+                        className={`text-indigo-300 font-bold mb-4 uppercase tracking-widest text-[9px] flex items-center gap-2 ${isEven ? "md:flex-row-reverse" : ""}`}
                       >
-                        <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-primary-500 animate-pulse"></span>
+                        <span className="w-1 h-1 rounded-full bg-primary-500 animate-pulse"></span>
                         {exp.company} // {exp.location}
                       </p>
 
-                      <p className="text-slate-400 leading-relaxed font-medium italic text-base md:text-lg opacity-80 group-hover:opacity-100 transition-opacity duration-500">
+                      <p className="text-slate-400 leading-relaxed font-medium italic text-xs md:text-sm opacity-80 group-hover:opacity-100 transition-opacity duration-500">
                         {exp.description}
                       </p>
                     </div>

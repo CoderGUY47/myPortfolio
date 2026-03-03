@@ -84,26 +84,21 @@ const About = () => {
         className="absolute -top-20 -left-20 w-[600px] h-[600px] bg-indigo-600/5 blur-[120px] rounded-full pointer-events-none"
       ></motion.div>
 
-      <div className="w-[90%] lg:w-[85%] max-w-7xl mx-auto px-6 relative z-10">
-        <div className="grid lg:grid-cols-12 gap-16 items-start">
+      <div className="w-[90%] md:w-[70%] max-w-7xl mx-auto px-6 relative z-10">
+        {/* ✍️ TOP NARRATIVE: IMAGE + BIO */}
+        <div className="grid lg:grid-cols-12 gap-16 items-start mb-24">
           {/* 🖼️ LEFT COLUMN: IDENTITY & VISUAL CENTER */}
           <div className="lg:col-span-5 relative group">
             <motion.div
               style={{ rotate: imageRotate }}
               className="relative aspect-square md:aspect-[4/5] overflow-hidden rounded-[4rem] group"
             >
-              {/* Main Image */}
               <img
                 src="/biopic.png"
                 alt="S.M.Hasan - Professional Persona"
                 className="w-full h-full object-cover transition-all duration-1000 scale-105 group-hover:scale-100"
               />
-
-              {/* Senior Touch: Glass Overlay Frame */}
-              <div className="absolute inset-0 border-[16px] border-white/5 rounded-[4rem] pointer-events-none"></div>
-              <div className="absolute inset-0 bg-linear-to-t from-dark-bg/80 via-transparent to-transparent opacity-60"></div>
-
-              {/* Floating Badge */}
+              <div className="absolute inset-0 border-16 border-white/5 rounded-[4rem] pointer-events-none"></div>
               <div className="absolute bottom-10 left-10 right-10 glass p-6 rounded-3xl border border-white/10 backdrop-blur-2xl translate-y-4 group-hover:translate-y-0 transition-transform duration-700">
                 <span className="text-primary-400 font-black text-[10px] uppercase tracking-widest block mb-1">
                   Current Focus
@@ -113,13 +108,11 @@ const About = () => {
                 </span>
               </div>
             </motion.div>
-
-            {/* Background Decorative Rings */}
             <div className="absolute -inset-10 border border-white/5 rounded-full -z-10 animate-[spin_20s_linear_infinite] opacity-30"></div>
             <div className="absolute -inset-20 border border-primary-500/10 rounded-full -z-10 animate-[spin_30s_linear_infinite_reverse] opacity-20"></div>
           </div>
 
-          {/* ✍️ RIGHT COLUMN: NARRATIVE & STATS */}
+          {/* ✍️ RIGHT COLUMN: STORY */}
           <div className="lg:col-span-7 space-y-12">
             <div className="space-y-6">
               <motion.div
@@ -158,58 +151,60 @@ const About = () => {
                 that resonate with users on a visceral level.
               </p>
             </div>
+          </div>
+        </div>
 
-            {/* 📊 SENIOR STATS: HORIZONTAL GRID CENTERED */}
-            <div className="pt-12 grid grid-cols-2 md:grid-cols-4 gap-4 border-t border-white/5 justify-items-center">
-              <Counter
-                target={5}
-                label="Years Vision"
-                icon="fa-solid fa-compass"
-                colorClass="from-blue-400 to-indigo-500"
-              />
-              <Counter
-                target={120}
-                label="Deployments"
-                icon="fa-solid fa-bolt"
-                colorClass="from-purple-400 to-primary-500"
-              />
-              <Counter
-                target={60}
-                label="Collabs"
-                icon="fa-solid fa-handshake"
-                colorClass="from-indigo-400 to-blue-500"
-              />
-              <Counter
-                target={15}
-                label="Mentions"
-                icon="fa-solid fa-bookmark"
-                colorClass="from-primary-400 to-purple-500"
-              />
+        {/* 📊 BOTTOM METRICS: CENTERED & FULL WIDTH */}
+        <div className="pt-12 border-t border-white/5 space-y-16">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 justify-items-center">
+            <Counter
+              target={5}
+              label="Years Vision"
+              icon="fa-solid fa-compass"
+              colorClass="from-blue-400 to-indigo-500"
+            />
+            <Counter
+              target={120}
+              label="Deployments"
+              icon="fa-solid fa-bolt"
+              colorClass="from-purple-400 to-primary-500"
+            />
+            <Counter
+              target={60}
+              label="Collabs"
+              icon="fa-solid fa-handshake"
+              colorClass="from-indigo-400 to-blue-500"
+            />
+            <Counter
+              target={15}
+              label="Mentions"
+              icon="fa-solid fa-bookmark"
+              colorClass="from-primary-400 to-purple-500"
+            />
+          </div>
+
+          {/* Action Group CENTERED */}
+          <div className="flex flex-wrap gap-8 md:gap-24 justify-center text-center">
+            <div className="flex flex-col items-center">
+              <span className="text-[10px] font-black text-primary-400 uppercase tracking-widest mb-2">
+                Direct Line
+              </span>
+              <span
+                className="text-xl md:text-2xl font-bold text-white hover:text-primary-400 transition-colors cursor-pointer"
+                onClick={() =>
+                  (window.location.href = "mailto:s.m.hasan4599@gmail.com")
+                }
+              >
+                s.m.hasan4599@gmail.com
+              </span>
             </div>
-
-            {/* Action Group CENTERED */}
-            <div className="pt-8 flex flex-wrap gap-8 justify-center md:justify-start">
-              <div className="flex flex-col items-center md:items-start text-center md:text-left">
-                <span className="text-[10px] font-black text-primary-400 uppercase tracking-widest mb-1">
-                  Direct Line
-                </span>
-                <span
-                  className="text-xl font-bold text-white hover:text-primary-400 transition-colors cursor-pointer"
-                  onClick={() =>
-                    (window.location.href = "mailto:s.m.hasan4599@gmail.com")
-                  }
-                >
-                  s.m.hasan4599@gmail.com
-                </span>
-              </div>
-              <div className="flex flex-col items-center md:items-start text-center md:text-left">
-                <span className="text-[10px] font-black text-primary-400 uppercase tracking-widest mb-1">
-                  Base
-                </span>
-                <span className="text-xl font-bold text-white italic">
-                  Dhaka // Remote
-                </span>
-              </div>
+            <div className="flex flex-col items-center">
+              <span className="text-[10px] font-black text-primary-400 uppercase tracking-widest mb-2">
+                Base
+              </span>
+              <span className="text-xl md:text-2xl font-bold text-white italic">
+                Dhaka // Remote
+              </span>
             </div>
           </div>
         </div>

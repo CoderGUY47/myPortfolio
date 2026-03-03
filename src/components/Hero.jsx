@@ -93,39 +93,66 @@ const Hero = () => {
           </div>
         </motion.div>
 
+        {/* 🛸 INTERACTIVE BIOPIC (REIMAGINED) */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, delay: 0.2 }}
-          style={{
-            y: y2,
-            rotate: rotate,
-            opacity: imageOpacity,
-            scale: useTransform(scrollYProgress, [0, 0.4], [1, 0.8]),
-          }}
+          initial={{ opacity: 0, scale: 0.9, x: 50 }}
+          animate={{ opacity: 1, scale: 1, x: 0 }}
+          transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+          className="relative flex justify-center items-center"
         >
-          <div className="relative z-10 glass p-4 rounded-[2.5rem] overflow-hidden shadow-2xl animate-float border border-white/10">
-            <div className="relative overflow-hidden rounded-3xl group">
+          {/* Main Identity Container */}
+          <div className="relative w-full max-w-[450px] aspect-[4/5] group">
+            {/* 🎭 VIGNETTE IDENTITY (True Zero-Box Float) */}
+            <div className="absolute inset-0 z-10">
               <img
                 src="/biopic.png"
-                alt="S.M.Hasan Biopic"
-                className="w-full h-auto object-cover transition-all duration-700 hover:scale-105"
+                alt="S.M.Hasan"
+                className="w-full h-full object-contain transition-all duration-1000 scale-105 group-hover:scale-110"
+                style={{
+                  maskImage:
+                    "radial-gradient(circle at 45% 40%, black 20%, transparent 85%)",
+                  WebkitMaskImage:
+                    "radial-gradient(circle at 45% 40%, black 20%, transparent 85%)",
+                }}
               />
-              <div className="absolute inset-0 bg-linear-to-t from-dark-bg via-transparent to-transparent opacity-60"></div>
             </div>
 
-            <div className="absolute bottom-10 left-10">
-              <p className="text-white font-black text-2xl uppercase tracking-tighter">
-                Innovate.
-              </p>
-              <p className="text-primary-400 font-bold tracking-widest text-xs uppercase opacity-80 mt-1">
-                Design. Develop.
-              </p>
+            {/* 🛰️ ORBITAL HUD ELEMENTS (INTERACTIVE) */}
+            <motion.div
+              animate={{ rotate: 360 }}
+              transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
+              className="absolute -inset-10 border border-primary-500/10 rounded-full z-0 pointer-events-none"
+            ></motion.div>
+
+            <div className="absolute top-10 -right-12 z-30">
+              <div className="glass px-4 py-2 rounded-xl border border-white/10 backdrop-blur-3xl animate-float [animation-delay:-2s]">
+                <div className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                  <span className="text-[9px] font-black uppercase tracking-widest text-emerald-400">
+                    UI.Deploy: Active
+                  </span>
+                </div>
+              </div>
             </div>
+
+            <div className="absolute bottom-20 -left-12 z-30">
+              <div className="glass px-4 py-2 rounded-xl border border-white/10 backdrop-blur-3xl animate-float">
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-px bg-primary-400"></div>
+                  <span className="text-[9px] font-black uppercase tracking-widest text-primary-400">
+                    Architecture: v4.7
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* 🧬 DATA STREAM OVERLAY (SUBTLE INTERACTIVE CLICK) */}
+            <div className="absolute inset-0 z-40 group-hover:bg-primary-500/5 transition-all duration-700 pointer-events-none rounded-[5rem]"></div>
           </div>
-          {/* Decorative Elements */}
-          <div className="absolute -top-10 -right-10 w-48 h-48 bg-linear-to-br from-primary-400 to-purple-500 rounded-full blur-3xl opacity-30 -z-10"></div>
-          <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-indigo-500/20 rounded-full blur-2xl -z-10 animate-pulse"></div>
+
+          {/* Decorative Glows */}
+          <div className="absolute -z-10 w-[140%] h-[140%] bg-indigo-600/5 blur-[120px] rounded-full pointer-events-none"></div>
+          <div className="absolute -z-10 w-[100%] h-[100%] bg-primary-600/10 blur-[80px] rounded-full animate-pulse transition-all pointer-events-none"></div>
         </motion.div>
       </div>
     </section>

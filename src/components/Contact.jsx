@@ -88,7 +88,7 @@ const Contact = () => {
         className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-purple-600/5 blur-[120px] rounded-full translate-x-1/2 pointer-events-none"
       ></motion.div>
 
-      <div className="w-[90%] md:w-[80%] max-w-7xl mx-auto px-6 relative z-10">
+      <div className="w-[90%] md:w-[70%] max-w-6xl mx-auto px-6 relative z-10">
         <div className="grid md:grid-cols-2 gap-16 md:gap-32 items-center">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -99,11 +99,11 @@ const Contact = () => {
             <span className="text-primary-400 font-black tracking-[0.4em] text-[10px] uppercase bg-primary-950/30 px-6 py-2 rounded-full border border-primary-500/20 mb-8 inline-block">
               Connection Hub
             </span>
-            <h2 className="text-5xl md:text-7xl font-black mb-8 uppercase tracking-tighter leading-none">
+            <h2 className="text-4xl md:text-6xl font-black mb-8 uppercase tracking-tighter leading-none">
               Let's build <br />
               <span className="text-gradient">the future</span>
             </h2>
-            <p className="text-slate-400 mb-12 text-lg leading-relaxed font-medium italic">
+            <p className="text-slate-400 mb-12 text-sm md:text-base leading-relaxed font-medium italic">
               Whether you have a focused project or a wild idea, I'm here to{" "}
               <br className="hidden lg:block" />
               engineer the digital interface that brings it to life.
