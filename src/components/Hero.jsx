@@ -30,7 +30,7 @@ const Hero = () => {
               {/* Row 1: S.M. (Glitch White) */}
               <div className="relative group">
                 <h1
-                  className="text-4xl md:text-6xl font-heading font-black leading-[0.85] tracking-tight uppercase text-white cyber-glitch"
+                  className="text-3xl md:text-4xl font-heading font-black leading-[0.85] tracking-wide uppercase text-white cyber-glitch mb-2"
                   data-text="S.M."
                 >
                   S.M.HASAN
@@ -38,8 +38,8 @@ const Hero = () => {
               </div>
 
               {/* Row 3: FRONTEND RECENT (Pink Gradient) */}
-              <h1 className="text-4xl md:text-6xl font-heading font-black leading-[0.85] tracking-tight uppercase bg-linear-to-r from-accent-secondary to-accent-secondary/40 bg-clip-text text-transparent">
-                AI Driven FRONTEND Developer
+              <h1 className="text-4xl md:text-5xl font-heading font-black leading-[0.85] tracking-wide uppercase bg-linear-to-r from-accent-secondary to-accent-secondary/40 bg-clip-text text-transparent">
+                AI Driven <br />FRONTEND Developer
               </h1>
 
               {/* Row 4: FUTURE MERN STACK (Blue Gradient)
@@ -48,27 +48,19 @@ const Hero = () => {
             </h1> */}
             </div>
 
-            <p className="max-w-xl mx-auto lg:ml-0 text-white  font-normal font-mono text-left text-sm leading-relaxed mb-10 uppercase tracking-widest">
+            <p className="max-w-xl mx-auto lg:ml-0 text-white  font-normal font-mono text-left text-sm leading-relaxed mb-6 mt-6 uppercase tracking-widest">
               By integrating robust{" "}
               <span className="text-accent font-black text-lg">
                 RESTful APIs
-              </span>{" "}
-              with modern frontend stacks, I ensure your web applications <br />
+              </span>{" "} <br />
+              with modern frontend stacks,<br /> I ensure your web applications <br />
               <span className="text-accent-secondary font-black text-lg">
                 {" "}
                 stay fast, synchronized, and scalable.
               </span>{" "}
               <br />
-              🖇️ UNDERSTANDING YOUR EXPECTATIONS VIA COMMUNICATION, I CAN GET
-              YOU A BETTER OUTPUT without lag. <br />
-              📩 𝗟𝗲𝘁’𝘀 𝗧𝗮𝗹𝗸: CONTACT with ME ON{" "}
-              <span className="text-accent font-black text-lg">
-                LINKEDIN
-              </span>{" "}
-              OR REACH OUT VIA EMAIL:{" "}
-              <span className="text-accent font-black text-lg">
-                s.m.hasan4599@gmail.com
-              </span>{" "}
+              🖇️ UNDERSTANDING YOUR  VIA COMMUNICATION, <br />I CAN GET
+              YOU A BETTER OUTPUT without lag. <br />{" "}
               <br />
             </p>
 
