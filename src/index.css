@@ -7,7 +7,7 @@
   --font-heading: "Orbitron", sans-serif;
   --font-accent: "Share Tech Mono", monospace;
 
-  /* Cyberpunk Palette Map */
+  /* Original Cyberpunk Palette Map */
   --color-background: #0a0a0f;
   --color-foreground: #e0e0e0;
   --color-card: #12121a;
@@ -250,5 +250,48 @@
     transform: translateX(-50%) translateY(-50%);
     opacity: 1;
     transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
+  }
+
+  /* Progress Bar Component Styles */
+  .skill-loader-container {
+    width: 100%;
+    max-width: 400px;
+    height: 18px;
+    background-color: #000000;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid white;
+  }
+
+  .skill-progress-fill {
+    height: 100%;
+    background-color: #ffffff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: skill-progress-anim 2s ease-in-out forwards;
+  }
+
+  .skill-progress-fill::after {
+    content: attr(data-percentage);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-weight: bold;
+    transform: translate(-50%, -50%);
+    font-size: 0.65rem;
+    color: black;
+    white-space: nowrap;
+    font-family: var(--font-accent);
+  }
+
+  @keyframes skill-progress-anim {
+    0% {
+      width: 0%;
+    }
+
+    100% {
+      width: var(--target-width);
+    }
   }
 }

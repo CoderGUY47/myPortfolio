@@ -4,31 +4,17 @@ const Experience = () => {
   const experiences = [
     {
       company: 'DAFFODIL_INT_UNIVERSITY',
-      role: 'B.SC_IN_COMPUTER_SCIENCE_ENGINEER',
-      period: '2021 - 2026',
-      description: 'Core focus on Software Engineering, Data Structures, and AI. Developing industry-standard applications while maintaining academic excellence.',
-      tech: ['SOFTWARE_ARCH', 'ALGORITHMS', 'RESEARCH']
+      role: 'CSE_STUDENT_RESEARCHER',
+      period: '2021 - PRESENT',
+      description: 'Mastering algorithmic rigor via DSA and DBMS protocols. Conducting performance-based research in Web Optimization and AI accuracy, achieving 95+ Google Lighthouse standards across production-ready solutions.',
+      tech: ['DSA', 'DBMS', 'Software_Engineering', 'Web_Optimization', 'AI_Research', 'Optimization']
     },
     {
-      company: 'GOODS_PANDA_E-COMMERCE',
-      role: 'REACT_FRONTEND_ENGINEER',
-      period: '2024 - PRESENT',
-      description: 'Building premium, high-conversion user interfaces for local and global e-commerce substrates. Optimized for state-of-the-art performance.',
-      tech: ['REACT_VITE', 'TAILWIND_V4', 'UI_UX']
-    },
-    {
-      company: 'AI_LABS_DIU',
-      role: 'PROJECT_CONTRIBUTOR',
-      period: '2023 - 2025',
-      description: 'Collaborating on AI-driven small modules and utility tools for internal student management systems.',
-      tech: ['PYTHON', 'JS_DOM', 'OPEN_SOURCE']
-    },
-    {
-      company: 'GITHUB_OPEN_CORE',
-      role: 'SYSTEM_CONTRIBUTOR',
-      period: '2021 - 2024',
-      description: 'Documenting and developing 50+ repositories ranging from basic data structures to advanced UI components.',
-      tech: ['GIT', 'CLEAN_CODE', 'SYSTEM_TRAIN']
+      company: 'OXPECKER_BOOK_HUB',
+      role: 'AI_DRIVEN_MERN_DEVELOPER',
+      period: '2025 - PRESENT',
+      description: 'Architecting a P2P academic marketplace substrate. Implemented Bento-grid UI protocols increasing navigation efficiency by 25%. Engineered advanced search-filter algorithms and fluid scroll-triggered animations.',
+      tech: ['MERN_STACK', 'P2P_PROTOCOL', 'BENTO_UI', 'FILTER_ALGORITHMS', 'FRAMER_MOTION', 'UI_UX']
     }
   ];
 
@@ -37,7 +23,7 @@ const Experience = () => {
       <div className="flex flex-col items-center mb-6 text-center px-6">
         <span className="text-accent-secondary font-mono text-[10px] tracking-[0.5em] block mb-2 uppercase">// CAREER_LOGS</span>
         <h2 className="text-2xl md:text-3xl font-heading font-black uppercase tracking-tighter">
-          PROJECT_TIMELINE
+          Experience
         </h2>
         {/* Animated Smooth Scanning Underline */}
         <div className="relative w-48 h-0.5 mt-6 overflow-hidden bg-white/5 rounded-full">
@@ -72,7 +58,7 @@ const Experience = () => {
                 </span>
               </div>
 
-              <p className="max-w-xl text-xs font-mono text-foreground/40 leading-relaxed uppercase mb-6">
+              <p className="max-w-xl text-sm font-mono text-white leading-relaxed uppercase mb-6">
                 {exp.description}
               </p>
 
@@ -81,7 +67,7 @@ const Experience = () => {
                 {exp.tech.map(t => (
                   <span 
                     key={t}
-                    className="px-2 py-0.5 border border-white/10 text-[8px] font-mono text-foreground/30 uppercase tracking-widest group-hover:border-accent-secondary/20 group-hover:text-foreground transition-all"
+                    className="px-2 py-0.5 border border-white/10 text-xs font-mono text-white/80 uppercase tracking-widest group-hover:border-accent-secondary/50 group-hover:text-white transition-all"
                   >
                     {t}
                   </span>

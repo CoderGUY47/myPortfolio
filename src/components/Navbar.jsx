@@ -2,9 +2,9 @@ import React from "react";
 
 const Navbar = () => {
   const links = [
-    { name: "ARCHIVE", href: "#work", code: "01" },
-    { name: "ACADEMIC", href: "#education", code: "02" },
-    { name: "CONTACT", href: "#contact", code: "03" },
+    { name: "Projects", href: "#projects", code: "01" },
+    { name: "Experience", href: "#experience", code: "02" },
+    { name: "Education", href: "#education", code: "03" },
   ];
 
   return (
@@ -26,13 +26,13 @@ const Navbar = () => {
             </h2>
             <div className="px-1.5 py-0.5 border border-accent/20 bg-accent/5 rounded-full flex items-center gap-1">
               <div className="w-1 h-1 bg-accent rounded-full animate-pulse"></div>
-              <span className="text-[6px] font-mono text-accent font-bold uppercase tracking-widest">
+              <span className="text-[9px] font-mono text-accent font-bold uppercase tracking-widest">
                 Live_Online
               </span>
             </div>
           </div>
           <span className="text-[9px] font-mono text-foreground/40 tracking-[0.4em] block uppercase">
-            AI_Driven_Frontend_Lead
+            AI_Driven_Frontend_Web_Developer
           </span>
         </div>
       </div>
@@ -49,10 +49,10 @@ const Navbar = () => {
           >
             {/* Animated Hover Background */}
             <div className="absolute top-0 left-0 w-full h-px bg-accent/50 -translate-x-full group-hover:translate-x-0 transition-transform duration-500"></div>
-            <span className="text-[7px] font-mono mb-0.5 text-accent/40 group-hover:text-accent transition-colors">
+            <span className="text-[10px] font-mono mb-0.5 text-accent/80 group-hover:text-accent transition-colors">
               [{link.code}]
             </span>
-            <span className="text-[9px] font-heading font-bold tracking-[0.2em]">
+            <span className="text-[12px] text-white/70 font-heading font-bold tracking-[0.2em]">
               {link.name}
             </span>
           </a>

@@ -81,7 +81,7 @@ const Contact = () => {
             {/* Pulsing Glitch Layer */}
             <span className="absolute inset-0 bg-white/30 -translate-x-full group-hover:translate-x-full transition-transform duration-500 ease-in-out"></span>
             <span className="relative z-10 flex items-center justify-center gap-2">
-              TRANSMIT <span className="animate-pulse opacity-50 block w-1.5 h-3 bg-black"></span>
+              SEND <span className="animate-pulse opacity-50 block w-1.5 h-3 bg-black"></span>
             </span>
           </button>
         </div>

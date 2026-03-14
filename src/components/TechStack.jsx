@@ -1,103 +1,111 @@
-import React from 'react';
-import { FaHtml5, FaCss3Alt } from 'react-icons/fa';
-import { SiJavascript, SiReact, SiNextdotjs, SiTailwindcss, SiNodedotjs, SiExpress, SiMongodb, SiTypescript, SiPostman, SiPython } from 'react-icons/si';
+import React from "react";
+import {
+  FaHtml5,
+  FaCss3Alt,
+  FaSearch,
+  FaJs,
+  FaReact,
+  FaNodeJs,
+  FaTerminal,
+  FaDatabase,
+  FaPalette,
+  FaCube,
+  FaCode,
+  FaRobot,
+  FaBrain,
+  FaPython,
+} from "react-icons/fa";
+import {
+  SiTypescript,
+  SiPostman,
+  SiExpress,
+  SiTailwindcss,
+} from "react-icons/si";
+import Parallax from "./Parallax";
+
+const SkillBar = ({ name, icon, percentage }) => {
+  return (
+    <div className="flex flex-col gap-2 p-4 border border-white/5 bg-card/20 cyber-chamfer-sm group hover:border-accent/40 transition-all duration-500">
+      <div className="flex items-center justify-between">
+        <div className="flex items-center gap-3">
+          <span className="text-xl text-accent/60 group-hover:text-accent transition-all duration-500">
+            {icon}
+          </span>
+          <span className="text-[10px] md:text-xs font-heading font-black text-white uppercase tracking-widest whitespace-nowrap">
+            {name}
+          </span>
+        </div>
+      </div>
+
+      <div className="skill-loader-container border-white/20">
+        <div
+          className="skill-progress-fill bg-accent shadow-[0_0_10px_rgba(0, 255, 136, 0.3)]"
+          style={{ "--target-width": `${percentage}%` }}
+          data-percentage={`${percentage}%`}
+        ></div>
+      </div>
+    </div>
+  );
+};
 
 const TechStack = () => {
-  const row1 = [
-    { name: "HTML5", icon: <FaHtml5 />, level: "EXPERT" },
-    { name: "CSS3", icon: <FaCss3Alt />, level: "EXPERT" },
-    { name: "Javascript", icon: <SiJavascript />, level: "ADVANCED" },
-    { name: "React.js", icon: <SiReact />, level: "ADVANCED" },
-    { name: "Next.js", icon: <SiNextdotjs />, level: "SKILLED" },
-    { name: "Tailwind", icon: <SiTailwindcss />, level: "EXPERT" },
+  const skills = [
+    { name: "HTML5", icon: <FaHtml5 />, percentage: 95 },
+    { name: "CSS3", icon: <FaCss3Alt />, percentage: 90 },
+    { name: "Javascript", icon: <FaJs />, percentage: 88 },
+    { name: "React.js", icon: <FaReact />, percentage: 92 },
+    { name: "Next.js", icon: <FaCube />, percentage: 80 },
+    { name: "TailwindCSS", icon: <SiTailwindcss />, percentage: 95 },
+    { name: "Node.js", icon: <FaNodeJs />, percentage: 85 },
+    { name: "Express.js", icon: <SiExpress />, percentage: 75 },
+    { name: "Adobe Illustrator", icon: <FaPalette />, percentage: 85 },
+    { name: "MongoDB", icon: <FaDatabase />, percentage: 70 },
+    { name: "Typescript", icon: <SiTypescript />, percentage: 78 },
+    { name: "Postman", icon: <SiPostman />, percentage: 85 },
+    { name: "API JSON", icon: <FaCode />, percentage: 92 },
+    { name: "AI Driven Logic", icon: <FaRobot />, percentage: 88 },
+    { name: "Python", icon: <FaPython />, percentage: 70 },
+    { name: "Research Analytics", icon: <FaSearch />, percentage: 82 },
   ];
-
-  const row2 = [
-    { name: "Node.js", icon: <SiNodedotjs />, level: "ADVANCED" },
-    { name: "Express", icon: <SiExpress />, level: "SKILLED" },
-    { name: "MongoDB", icon: <SiMongodb />, level: "SKILLED" },
-    { name: "Postman", icon: <SiPostman />, level: "ADVANCED" },
-    { name: "Typescript", icon: <SiTypescript />, level: "SKILLED" },
-    { name: "Python", icon: <SiPython />, level: "SKILLED" }
-  ];
-
-  const infiniteRow1 = [...row1, ...row1, ...row1];
-  const infiniteRow2 = [...row2, ...row2, ...row2];
 
   return (
-    <section className="py-16 relative overflow-hidden">
+    <section className="py-12 relative overflow-hidden px-4 sm:px-6 lg:px-10">
       {/* Industrial Section Header */}
-      <div className="flex flex-col items-center mb-10 px-6 text-center">
+      <div className="flex flex-col items-center mb-10 text-center">
         <div className="flex items-center gap-3 mb-4">
-           <span className="text-accent font-mono text-[9px] tracking-[0.4em] uppercase font-bold animate-pulse">
-             // RESOURCE_RESERVORY
-           </span>
+          <span className="text-accent font-mono text-[9px] tracking-[0.4em] uppercase font-bold animate-pulse">
+            // RESOURCE_RESERVORY
+          </span>
         </div>
-        <h2 className="text-3xl md:text-4xl font-heading font-black uppercase tracking-tighter text-white">
-          Programming Languages
+        <h2 className="text-2xl md:text-3xl font-heading font-black uppercase tracking-tighter text-white">
+          Technical Skills
         </h2>
-        {/* Progress HUD Scanning Bar */}
-        <div className="relative w-64 h-1 mt-6 overflow-hidden bg-white/5 rounded-full border border-white/5">
-           <div className="absolute inset-0 bg-linear-to-r from-transparent via-accent to-transparent animate-[sweep_4s_linear_infinite]"></div>
-        </div>
-      </div>
-
-      {/* Kinetic Data Sliders */}
-      <div className="space-y-4 w-full">
-        {/* Row 1: Forward Motion */}
-        <div className="relative group flex items-center bg-card/10 border border-white/5 cyber-chamfer-sm py-4 overflow-hidden backdrop-blur-sm">
-          {/* Static Scanline Overlay */}
-          <div className="absolute inset-0 bg-repeat-x opacity-10 pointer-events-none z-10" 
-               style={{ backgroundImage: 'linear-gradient(90deg, transparent 0%, #00ff88 50%, transparent 100%)', backgroundSize: '1000px 1px' }}></div>
-          
-          <div className="flex animate-[marquee_50s_linear_infinite] whitespace-nowrap">
-            {infiniteRow1.map((lang, i) => (
-              <div key={i} className="flex flex-col items-center gap-2 mx-12 group/item cursor-default relative">
-                <div className="flex items-center gap-4">
-                  <span className="text-2xl text-foreground/20 group-hover/item:text-accent group-hover/item:shadow-neon transition-all duration-500 scale-100 group-hover/item:scale-110">
-                    {lang.icon}
-                  </span>
-                  <span className="text-sm md:text-base font-heading font-black text-white/20 group-hover/item:text-white transition-all duration-500 uppercase tracking-[0.15em]">
-                    {lang.name}
-                  </span>
-                </div>
-                {/* Floating Proficiency HUD */}
-                <div className="absolute -bottom-4 opacity-0 group-hover/item:opacity-100 transition-opacity duration-300">
-                   <span className="text-[7px] font-mono text-accent border border-accent/20 px-1 bg-background/80 uppercase tracking-widest leading-none">
-                     STAT: {lang.level}
-                   </span>
-                </div>
-              </div>
-            ))}
+        {/* Advanced Cybernetic Alignment Underline */}
+        <div className="flex items-center justify-center w-full max-w-md mt-4 opacity-90">
+          <div className="flex-1 h-px bg-linear-to-r from-transparent to-accent/20 relative overflow-hidden rotate-180 cyber-chamfer">
+            <div className="absolute inset-0 w-[200%] bg-linear-to-r from-transparent via-accent to-transparent animate-[sweep_2s_ease-in-out_infinite]"></div>
           </div>
-        </div>
-
-        {/* Row 2: Reverse Motion */}
-        <div className="relative group flex items-center bg-card/10 border border-white/5 cyber-chamfer-sm py-4 overflow-hidden backdrop-blur-sm">
-          <div className="absolute inset-0 bg-repeat-x opacity-10 pointer-events-none z-10" 
-               style={{ backgroundImage: 'linear-gradient(90deg, transparent 0%, #ff00ff 50%, transparent 100%)', backgroundSize: '1000px 1px' }}></div>
-          <div className="flex animate-[marquee-reverse_50s_linear_infinite] whitespace-nowrap">
-            {infiniteRow2.map((lang, i) => (
-              <div key={i} className="flex flex-col items-center gap-2 mx-12 group/item cursor-default relative">
-                <div className="flex items-center gap-4">
-                  <span className="text-2xl text-foreground/20 group-hover/item:text-accent-secondary group-hover/item:shadow-neon-secondary transition-all duration-500 scale-100 group-hover/item:scale-110">
-                    {lang.icon}
-                  </span>
-                  <span className="text-sm md:text-base font-heading font-black text-white/20 group-hover/item:text-white transition-all duration-500 uppercase tracking-[0.15em]">
-                    {lang.name}
-                  </span>
-                </div>
-                {/* Floating Proficiency HUD */}
-                <div className="absolute -bottom-4 opacity-0 group-hover/item:opacity-100 transition-opacity duration-300">
-                   <span className="text-[7px] font-mono text-accent-secondary border border-accent-secondary/20 px-1 bg-background/80 uppercase tracking-widest leading-none">
-                     STAT: {lang.level}
-                   </span>
-                </div>
-              </div>
-            ))}
+          <div className="mx-3 flex items-center gap-2">
+            <div className="w-1 h-2 bg-accent/50 -skew-x-12"></div>
+            <div className="relative w-2 h-2 flex items-center justify-center border border-accent rotate-45 shadow-neon">
+              <div className="absolute w-1 h-1 bg-accent animate-ping"></div>
+              <div className="w-0.5 h-0.5 bg-accent relative z-10"></div>
+            </div>
+            <div className="w-1 h-2 bg-accent/50 skew-x-12"></div>
+          </div>
+          <div className="flex-1 h-px bg-linear-to-r from-transparent to-accent/20 relative overflow-hidden cyber-chamfer">
+            <div className="absolute inset-0 w-[200%] bg-linear-to-r from-transparent via-accent to-transparent animate-[sweep_2s_ease-in-out_infinite]"></div>
           </div>
         </div>
       </div>
+
+      <Parallax speed={0.05} className="w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-4 max-w-4xl mx-auto">
+          {skills.map((skill, i) => (
+            <SkillBar key={i} {...skill} />
+          ))}
+        </div>
+      </Parallax>
     </section>
   );
 };

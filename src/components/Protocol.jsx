@@ -24,24 +24,27 @@ const Protocol = () => {
   const steps = [
     {
       id: "01",
-      title: "Secondary School Cert.",
-      desc: "Foundational logic and mathematics. Establishing the initial cognitive substrates for algorithmic thinking.",
-      status: "ARCHIVED_DATA",
-      date: "COMPLETED",
+      title: "Bachelor of Science (B.Sc.)",
+      desc: "Computer Science and Engineering @ Daffodil International University (Ashulia). Deep-diving into high-performance software architectures and scalable digital ecosystems.",
+      status: "ACTIVE_PROTOCOL",
+      date: "2026 // EXPECTED",
+      gpa: "NOT_PUBLISHED_YET"
     },
     {
       id: "02",
-      title: "Higher Secondary Cert.",
-      desc: "Advanced architectural grounding in Physics and Computer Science. Pre-compilation phase for software engineering.",
-      status: "VERIFIED_SYNC",
-      date: "COMPLETED",
+      title: "Higher Secondary Cert. (HSC)",
+      desc: "Science Stream @ Mohammadpur Govt. College, Dhaka. Advanced grounding in mathematical logic and physical science. Achievement: 3.75 SCALE.",
+      status: "ARCHIVED_UPLINK",
+      date: "2019 // SYNCED",
+      gpa: "3.75"
     },
     {
       id: "03",
-      title: "BSc in CSE @ DIU",
-      desc: "Current engagement: Deep-dive into scalable web architectures, data structures, and high-fidelity MERN stack orchestration.",
-      status: "ACTIVE_PROCESS",
-      date: "2021 // 2026",
+      title: "Secondary School Cert. (SSC)",
+      desc: "Science Stream @ Dhanmondi Govt. Boys School, Dhaka. Initial initialization of technical foundations and core engineering principles. Achievement: 4.98 SCALE.",
+      status: "CORE_INITIALIZED",
+      date: "2017 // SYNCED",
+      gpa: "4.91"
     },
   ];
 
@@ -65,7 +68,7 @@ const Protocol = () => {
             <div className="w-8 h-px bg-accent"></div>
           </div>
           <h2 className="text-3xl md:text-4xl font-heading font-black uppercase tracking-tighter text-white">
-            ACADEMIC ARCHITECTURE
+            Educational BG
           </h2>
           {/* Advanced Cybernetic Alignment Underline */}
           <div className="flex items-center justify-center w-full max-w-md mt-8 opacity-90">
