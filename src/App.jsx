@@ -1,15 +1,6 @@
-// Deployment Sync: 2026-03-15
 import React from "react";
 import Navbar from "./components/Navbar";
 import Parallax from "./components/Parallax";
-import Hero from "./components/Hero";
-import AboutMe from "./components/AboutMe";
-import TechStack from "./components/TechStack";
-import Capabilities from "./components/Capabilities";
-import ProjectShowcase from "./components/ProjectShowcase";
-import Protocol from "./components/Protocol";
-import Contact from "./components/Contact";
-import Experience from "./components/Experience";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 
