@@ -108,9 +108,19 @@ const TechStack = () => {
             <SkillBar key={i} {...skill} />
           ))}
           
-          {showAll && optionalSkills.map((skill, i) => (
-            <SkillBar key={`optional-${i}`} {...skill} />
-          ))}
+          {showAll && (
+            <>
+              <div className="col-span-full mt-6 mb-2">
+                <h4 className="text-[9px] font-mono text-accent/60 uppercase tracking-[0.3em] flex items-center gap-2">
+                   <div className="w-1.5 h-1.5 bg-accent/20 border border-accent/40 rotate-45"></div>
+                   Secondary Specialized Modules
+                </h4>
+              </div>
+              {optionalSkills.map((skill, i) => (
+                <SkillBar key={`optional-${i}`} {...skill} />
+              ))}
+            </>
+          )}
         </div>
 
         {/* See More Trigger */}
