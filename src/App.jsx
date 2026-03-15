@@ -1,3 +1,4 @@
+// Deployment Sync: 2026-03-15
 import React from "react";
 import Navbar from "./components/Navbar";
 import Parallax from "./components/Parallax";
