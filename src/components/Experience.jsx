@@ -3,8 +3,8 @@ import React from 'react';
 const Experience = () => {
   const experiences = [
     {
-      company: 'DAFFODIL_INT_UNIVERSITY',
-      role: 'CSE_STUDENT_RESEARCHER',
+      company: 'DAFFODIL_International_University',
+      role: 'B.Sc. in CSE',
       period: '2021 - PRESENT',
       description: 'Mastering algorithmic rigor via DSA and DBMS protocols. Conducting performance-based research in Web Optimization and AI accuracy, achieving 95+ Google Lighthouse standards across production-ready solutions.',
       tech: ['DSA', 'DBMS', 'Software_Engineering', 'Web_Optimization', 'AI_Research', 'Optimization']

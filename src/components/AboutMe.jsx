@@ -1,109 +1,176 @@
-import React from 'react';
-import { FaUserAstronaut, FaCode, FaLightbulb, FaRocket } from 'react-icons/fa';
+import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { 
+  FaCode, FaServer, FaPaintBrush, FaRobot, 
+  FaRocket, FaGraduationCap, FaEnvelope, FaGithub,
+  FaArrowLeft 
+} from 'react-icons/fa';
 
 const AboutMe = () => {
-  const traits = [
-    {
-      icon: <FaCode />,
-      title: "Clean_Code_Manifesto",
-      description: "Writing industrial-grade, predictable codebases with a focus on maintainability and geometric precision."
-    },
-    {
-      icon: <FaLightbulb />,
-      title: "Problem_Solver",
-      description: "Deconstructing complex architectural bottlenecks into scalable, AI-integrated frontend solutions."
-    },
-    {
-      icon: <FaRocket />,
-      title: "Performance_First",
-      description: "Optimizing every pixel and byte to ensure ultra-low latency and a fluid user experience."
-    }
+  // Scroll to top on mount
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  const stats = [
+    { label: "Lighthouse_Score", value: "95+", color: "text-accent" },
+    { label: "Attention_Window", value: "0.05s", color: "text-red-500" },
+    { label: "Architecture", value: "Clean", color: "text-blue-400" },
+    { label: "Deployment", value: "Ready", color: "text-green-500" }
   ];
 
   return (
-    <section id="about" className="py-20 px-6 relative overflow-hidden">
-      {/* HUD Header */}
-      <div className="flex flex-col items-center mb-12 text-center">
-        <span className="text-accent font-mono text-[10px] tracking-[0.5em] block mb-2 uppercase select-none">
-          // IDENTITY_PROFILE
-        </span>
-        <h2 className="text-3xl md:text-4xl font-heading font-black uppercase tracking-tighter text-white">
-          About <span className="text-accent">Me</span>
-        </h2>
-        {/* Animated Scanning Underline */}
-        <div className="relative w-48 h-0.5 mt-4 overflow-hidden bg-white/5 rounded-full">
-           <div className="absolute inset-0 bg-linear-to-r from-transparent via-accent to-transparent animate-[sweep_3s_linear_infinite]"></div>
-        </div>
+    <div className="min-h-screen bg-background text-foreground selection:bg-accent selection:text-background py-24 px-6 relative overflow-hidden">
+      {/* Background Decorative Elements */}
+      <div className="fixed inset-0 pointer-events-none opacity-20">
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent/5 blur-[120px] rounded-full"></div>
+        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-accent-secondary/5 blur-[120px] rounded-full"></div>
       </div>
 
-      <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
-        {/* Visual Terminal Side */}
-        <div className="relative group p-1 bg-white/5 cyber-chamfer-sm border border-white/10 hover:border-accent/30 transition-all duration-700">
-           {/* Terminal Top Bar */}
-           <div className="bg-white/5 px-4 py-2 flex items-center justify-between border-b border-white/10">
-              <div className="flex gap-1.5">
-                 <div className="w-2 h-2 rounded-full bg-red-500/50"></div>
-                 <div className="w-2 h-2 rounded-full bg-yellow-500/50"></div>
-                 <div className="w-2 h-2 rounded-full bg-green-500/50"></div>
+      <div className="max-w-5xl mx-auto relative z-10">
+        {/* Navigation / Header */}
+        <div className="flex items-center justify-between mb-16 border-b border-white/5 pb-8">
+          <Link to="/" className="group flex items-center gap-3 text-accent hover:text-white transition-all duration-300">
+            <div className="w-10 h-10 border border-accent/30 flex items-center justify-center cyber-chamfer-xs group-hover:bg-accent group-hover:text-black transition-all">
+              <FaArrowLeft className="text-sm" />
+            </div>
+            <span className="font-mono text-[10px] tracking-[0.3em] uppercase underline-offset-4 group-hover:underline">
+              Return_to_Nexus
+            </span>
+          </Link>
+          <div className="hidden md:flex gap-8">
+            {stats.map((stat, i) => (
+              <div key={i} className="flex flex-col items-end">
+                <span className="text-[8px] font-mono text-white/30 uppercase tracking-widest">{stat.label}</span>
+                <span className={`text-sm font-heading font-black tracking-tighter uppercase ${stat.color}`}>{stat.value}</span>
               </div>
-              <span className="text-[8px] font-mono text-white/20 tracking-widest uppercase">system_about.exe</span>
-           </div>
-
-           <div className="p-8 font-mono text-sm leading-relaxed text-foreground/80 lowercase">
-              <p className="mb-6">
-                <span className="text-accent">&gt; init sm_hasan.profile</span><br/>
-                <span className="text-white/40">loading bio-substrate...</span><br/>
-                i am an <span className="text-white font-bold italic">ai-driven frontend engineer</span> and <span className="text-white font-bold italic">mern architect</span> dedicated to building <span className="text-white font-bold italic">scalable</span>, high-performance digital interfaces with full <span className="text-white font-bold italic">seo optimization</span>.
-              </p>
-              
-              <p className="mb-6">
-                my mission is to bridge the gap between complex <span className="text-accent-secondary">ai logic</span> and <span className="text-accent-secondary">scalable frontend systems</span>. i engineer high-fidelity digital ecosystems that are technically robust, search-engine optimized, and visually stunning.
-              </p>
-
-              <div className="grid grid-cols-2 gap-4 mt-8 opacity-60">
-                 <div className="flex flex-col">
-                    <span className="text-[10px] text-accent font-bold uppercase tracking-widest">Base_Location</span>
-                    <span className="text-xs text-white">Dhaka, Bangladesh</span>
-                 </div>
-                 <div className="flex flex-col">
-                    <span className="text-[10px] text-accent font-bold uppercase tracking-widest">Global_Deploy</span>
-                    <span className="text-xs text-white">Remote Ready</span>
-                 </div>
-              </div>
-           </div>
-
-           {/* Decorative Corner Accents */}
-           <div className="absolute top-0 right-0 w-8 h-8 border-t border-r border-accent/20"></div>
-           <div className="absolute bottom-0 left-0 w-8 h-8 border-b border-l border-accent/20"></div>
+            ))}
+          </div>
         </div>
 
-        {/* Traits Grid */}
-        <div className="grid gap-6">
-           {traits.map((trait, i) => (
-             <div 
-               key={i}
-               className="group relative p-6 border border-white/5 bg-white/2 cyber-chamfer-sm transition-all duration-300 hover:border-accent/40 hover:bg-white/4"
-             >
-                <div className="flex items-start gap-4">
-                   <div className="p-3 bg-accent/10 border border-accent/20 text-accent text-xl cyber-chamfer-xs group-hover:bg-accent group-hover:text-black transition-all">
-                      {trait.icon}
-                   </div>
-                   <div>
-                      <h3 className="text-sm font-heading font-black text-white uppercase tracking-wider mb-2 group-hover:text-accent">
-                         {trait.title}
-                      </h3>
-                      <p className="text-[11px] font-mono text-foreground/50 leading-relaxed uppercase">
-                         {trait.description}
-                      </p>
-                   </div>
-                </div>
-                {/* Micro Status Node */}
-                <div className="absolute top-4 right-4 w-1.5 h-1.5 bg-accent/20 group-hover:bg-accent rounded-full animate-pulse"></div>
+        {/* Hero Section */}
+        <div className="grid lg:grid-cols-[1.5fr_1fr] gap-16 items-start mb-24">
+          <div>
+            <span className="text-accent font-mono text-[10px] tracking-[0.5em] block mb-4 uppercase">
+              // SUBJECT_IDENTIFICATION
+            </span>
+            <h1 className="text-4xl md:text-6xl font-heading font-black uppercase tracking-tighter text-white mb-6 leading-[0.9]">
+              Full-Stack <span className="text-accent italic">Developer</span> & <br/>
+              MERN Specialist
+            </h1>
+            <div className="flex flex-wrap gap-3 mb-8">
+              <div className="px-3 py-1 border border-white/10 bg-white/5 rounded-full flex items-center gap-2">
+                <FaGraduationCap className="text-accent text-xs" />
+                <span className="text-[10px] font-mono text-white/70 uppercase">CSE @ Daffodil Int. University</span>
+              </div>
+              <div className="px-3 py-1 border border-accent/20 bg-accent/5 rounded-full flex items-center gap-2">
+                <div className="w-1.5 h-1.5 bg-accent rounded-full animate-pulse"></div>
+                <span className="text-[10px] font-mono text-accent uppercase font-bold tracking-widest">Available_for_Global_Deploy</span>
+              </div>
+            </div>
+            
+            <div className="space-y-6 text-foreground/70 leading-relaxed text-sm md:text-base font-mono lowercase tracking-tight">
+              <p>
+                i am dedicated to building <span className="text-white font-bold italic">"dazzling,"</span> production-grade digital identities. in a digital landscape where you only have <span className="text-red-400">0.05 seconds</span> to capture a user's attention, i bridge the gap between complex business logic and high-performance user engagement.
+              </p>
+              <p>
+                my engineering philosophy is rooted in <span className="text-white font-bold">clean architecture</span>, transparency, and scalability. i don’t just build functional sites; i optimize for <span className="text-accent">95+ google lighthouse scores</span>, ensuring zero perceived lag and seamless mobile-first responsiveness.
+              </p>
+            </div>
+          </div>
+
+          <div className="relative group">
+            <div className="absolute inset-0 bg-accent/10 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            <div className="relative border border-white/5 bg-white/2 p-1 cyber-chamfer-sm overflow-hidden">
+               <img 
+                 src="/images/bio-pic-png.png" 
+                 alt="S.M. Hasan Profile" 
+                 className="w-full grayscale group-hover:grayscale-0 transition-all duration-700 hover:scale-105"
+               />
+               <div className="absolute top-4 right-4 bg-black/80 backdrop-blur-md border border-accent/20 px-3 py-1.5 font-mono text-[9px] text-accent font-black tracking-widest uppercase">
+                  v_2.0.26_build
+               </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Skill Matrix - Bento Grid Inspiration */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-24">
+          <div className="p-8 border border-white/5 bg-white/2 cyber-chamfer-sm group hover:border-accent/40 transition-all">
+             <FaPaintBrush className="text-accent text-3xl mb-6 group-hover:scale-110 transition-transform" />
+             <h3 className="text-xs font-heading font-black text-white uppercase tracking-widest mb-3">Frontend_Mastery</h3>
+             <p className="text-[10px] font-mono text-foreground/40 leading-relaxed uppercase">
+                React.js, Next.js (App Router), & TypeScript paired with Tailwind CSS and Shadcn UI.
+             </p>
+          </div>
+          <div className="p-8 border border-white/5 bg-white/2 cyber-chamfer-sm group hover:border-accent/40 transition-all">
+             <FaServer className="text-accent text-3xl mb-6 group-hover:scale-110 transition-transform" />
+             <h3 className="text-xs font-heading font-black text-white uppercase tracking-widest mb-3">Backend_Excellence</h3>
+             <p className="text-[10px] font-mono text-foreground/40 leading-relaxed uppercase">
+                Robust Node.js/Express architectures and seamless RESTful API integrations for complex workflows.
+             </p>
+          </div>
+          <div className="p-8 border border-white/5 bg-white/2 cyber-chamfer-sm group hover:border-accent/40 transition-all">
+             <FaRocket className="text-accent text-3xl mb-6 group-hover:scale-110 transition-transform" />
+             <h3 className="text-xs font-heading font-black text-white uppercase tracking-widest mb-3">Modern_UIUX</h3>
+             <p className="text-[10px] font-mono text-foreground/40 leading-relaxed uppercase">
+                High-end animations with Framer Motion and Bento-grid layouts that enhance user retention.
+             </p>
+          </div>
+          <div className="p-8 border border-white/5 bg-white/2 cyber-chamfer-sm group hover:border-accent/40 transition-all">
+             <FaRobot className="text-accent text-3xl mb-6 group-hover:scale-110 transition-transform" />
+             <h3 className="text-xs font-heading font-black text-white uppercase tracking-widest mb-3">AI_Driven_Eng</h3>
+             <p className="text-[10px] font-mono text-foreground/40 leading-relaxed uppercase">
+                Leveraging AI-assisted development (Cursor/Copilot) to accelerate cycles without compromising integrity.
+             </p>
+          </div>
+        </div>
+
+        {/* Detailed Bio / Experience Philosophy */}
+        <div className="border border-white/5 bg-white/1 p-10 cyber-chamfer-sm mb-24 relative overflow-hidden group">
+           <div className="absolute top-0 right-0 w-32 h-32 bg-accent/5 -rotate-45 translate-x-12 -translate-y-12"></div>
+           <h2 className="text-2xl font-heading font-black uppercase text-white mb-8 flex items-center gap-4">
+              <span className="text-accent">#</span> The_Impact_Focus
+           </h2>
+           <div className="grid md:grid-cols-[1fr_auto_1fr] gap-12 items-center">
+             <div className="text-sm font-mono text-foreground/60 leading-relaxed lowercase">
+                whether it’s architecting an e-commerce platform like <span className="text-white underline underline-offset-4 decoration-accent/30">epanda</span> or a p2p marketplace like <span className="text-white underline underline-offset-4 decoration-accent/30">oxpecker</span>, my focus is always on delivering measurable impact through clean, maintainable code.
              </div>
-           ))}
+             <div className="w-px h-24 bg-white/5 hidden md:block"></div>
+             <div className="text-sm font-mono text-foreground/60 leading-relaxed lowercase">
+               i am currently seeking opportunities to collaborate with startups and tech-forward companies to build the next generation of high-performance web solutions.
+             </div>
+           </div>
+        </div>
+
+        {/* Call to Action Matrix */}
+        <div className="grid md:grid-cols-2 gap-8">
+           <div className="p-10 bg-accent cyber-chamfer-sm flex items-center justify-between group cursor-pointer hover:bg-white transition-all duration-500">
+              <div className="flex flex-col">
+                 <span className="text-black/60 font-mono text-[9px] font-bold uppercase tracking-widest mb-1">Direct_Uplink</span>
+                 <h4 className="text-xl font-heading font-black text-black">Email_Hasan</h4>
+              </div>
+              <a href="mailto:s.m.hasan4599@gmail.com" className="w-12 h-12 border border-black/20 flex items-center justify-center cyber-chamfer-xs group-hover:bg-black group-hover:text-white transition-all">
+                <FaEnvelope />
+              </a>
+           </div>
+           <div className="p-10 border border-white/10 bg-white/5 cyber-chamfer-sm flex items-center justify-between group cursor-pointer hover:border-accent/40 transition-all duration-500">
+              <div className="flex flex-col">
+                 <span className="text-white/40 font-mono text-[9px] uppercase tracking-widest mb-1">Source_Code</span>
+                 <h4 className="text-xl font-heading font-black text-white">GitHub_Nexus</h4>
+              </div>
+              <a href="https://github.com/coderguy47" target="_blank" rel="noopener noreferrer" className="w-12 h-12 border border-white/10 flex items-center justify-center cyber-chamfer-xs group-hover:bg-accent group-hover:text-black transition-all">
+                <FaGithub />
+              </a>
+           </div>
         </div>
       </div>
-    </section>
+      
+      {/* Decorative HUD Details */}
+      <div className="fixed top-12 right-12 font-mono text-[8px] text-white/10 uppercase tracking-[0.5em] vertical-text hidden xl:block">
+         IDENTITY_SUBSTRATE_VER_2.4
+      </div>
+    </div>
   );
 };
 
