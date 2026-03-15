@@ -1,49 +1,56 @@
 import React from "react";
 import {
   FaCode,
-  FaJs,
   FaReact,
-  FaPalette,
-  FaLayerGroup,
-  FaSyncAlt,
+  FaPaintBrush,
+  FaMagic,
+  FaDatabase,
+  FaRocket,
+  FaSearch,
 } from "react-icons/fa";
 
 const Capabilities = () => {
   const services = [
     {
-      icon: <FaCode />,
-      title: "HTML5 & CSS3",
-      status: "Robust_Scalable", 
+      icon: <FaReact />,
+      title: "Custom React Web Apps",
+      description: "Developing highly interactive, component-based single-page applications (SPAs) focused on speed and scalability.",
+      status: "Active & Ready", 
       id: "PHASE_01",
     },
     {
-      icon: <FaJs />,
-      title: "JAVASCRIPT",
-      status: "STABLE",
+      icon: <FaPaintBrush />,
+      title: "Modern UI/UX",
+      description: "Transforming Figma designs into pixel-perfect React components using Tailwind CSS and Shadcn UI",
+      status: "High-Demand",
       id: "PHASE_02",
     },
     {
-      icon: <FaReact />,
-      title: "REACT_VITE",
-      status: "STABLE",
+      icon: <FaMagic />,
+      title: "Interactive Design",
+      description: "Enhancing user retention with high-end, scroll-triggered animations and transitions using Framer Motion.", 
+      status: "Premium-Tier",
       id: "PHASE_03",
     },
     {
-      icon: <FaPalette />,
-      title: "ADOBE_ILLUSTRATOR",
-      status: "DESIGN_READY",
+      icon: <FaDatabase />,
+      title: "API & Data Integration",
+      description: "Connecting React frontends to RESTful APIs and external data sources for real-time, dynamic content updates.",
+      status: "Strategic Level",
       id: "PHASE_04",
     },
     {
-      icon: <FaLayerGroup />,
-      title: "UI_UX_ARCHITECTURE",
-      status: "SCALABLE_DESIGN",
+      icon: <FaRocket />,
+      title: "Performance",
+      description: "Identifying and fixing bottlenecks (re-renders, large bundles) to ensure your app stays under the 0.05s attention threshold.",
+      status: "Intermediate Service",
       id: "PHASE_05",
     },
     {
-      icon: <FaSyncAlt />,
-      title: "API_FETCHING",
-      status: "STABLE",
+      icon: <FaSearch />,
+      title: "SEO Optimization",
+      description: "Building lightning-fast websites with Server-Side Rendering (SSR) to achieve 95+ Lighthouse and SEO scores.",
+      status: "Core Offering",
       id: "PHASE_06",
     },
   ];
@@ -124,7 +131,7 @@ const Capabilities = () => {
             </div>
 
             {/* Service Designation */}
-            <h3 className="text-[8px] md:text-xs font-heading font-black text-white lg:group-hover:text-accent transition-colors tracking-[0.2em] uppercase mb-3 md:mb-4">
+            <h3 className="text-[10px] md:text-sm font-heading font-black text-white lg:group-hover:text-accent transition-colors tracking-[0.2em] uppercase mb-3 md:mb-4">
               {item.title}
             </h3>
 
@@ -135,6 +142,11 @@ const Capabilities = () => {
                 {item.status}
               </span>
             </div>
+
+            {/* Service Description */}
+            <p className="text-[8px] md:text-xs font-mono text-white/60 lg:group-hover:text-accent transition-colors tracking-[0.2em] uppercase mb-3 md:mb-4">
+              {item.description}
+            </p>
 
             {/* Bottom HUD Bar */}
             <div className="absolute bottom-0 left-0 w-full h-px bg-linear-to-r from-transparent via-accent/20 md:via-white/5 to-transparent lg:group-hover:via-accent/40 transition-all duration-700"></div>

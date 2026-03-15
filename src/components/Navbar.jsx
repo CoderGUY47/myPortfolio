@@ -8,6 +8,7 @@ const Navbar = () => {
   const isHome = location.pathname === "/";
   
   const links = [
+    { name: "Home", href: "/", code: "00", isRoute: true },
     { name: "About", href: "/about", code: "01", isRoute: true },
     { name: "Projects", href: "#projects", code: "02" },
     { name: "Feedback", href: "/feedback", code: "03", isRoute: true },

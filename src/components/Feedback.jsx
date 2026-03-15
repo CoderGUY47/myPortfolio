@@ -9,40 +9,65 @@ const Feedback = () => {
   const [isSent, setIsSent] = useState(false);
   const [feedbacks, setFeedbacks] = useState([]);
 
-  // Load existing feedbacks and scroll to top
+  // Load existing feedbacks from MongoDB
   useEffect(() => {
     window.scrollTo(0, 0);
-    const stored = localStorage.getItem('portfolio_feedbacks');
-    if (stored) {
-      setFeedbacks(JSON.parse(stored));
-    }
+    fetchFeedbacks();
   }, []);
 
-  const handleSubmit = (e) => {
+  const fetchFeedbacks = async () => {
+    try {
+      const response = await fetch('http://localhost:5000/api/feedbacks');
+      const data = await response.json();
+      setFeedbacks(data);
+    } catch (error) {
+      console.error('Error fetching data:', error);
+      // Fallback to localStorage if API fails
+      const stored = localStorage.getItem('portfolio_feedbacks');
+      if (stored) setFeedbacks(JSON.parse(stored));
+    }
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!comment || !username) return;
 
     const newFeedback = {
-      id: Date.now(),
       username,
       rating,
-      comment,
-      date: new Date().toLocaleDateString('en-US', {
-        year: 'numeric',
-        month: 'short',
-        day: 'numeric'
-      })
+      comment
     };
 
-    const updatedFeedbacks = [newFeedback, ...feedbacks];
-    setFeedbacks(updatedFeedbacks);
-    localStorage.setItem('portfolio_feedbacks', JSON.stringify(updatedFeedbacks));
+    try {
+      const response = await fetch('http://localhost:5000/api/feedbacks', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(newFeedback),
+      });
 
-    setIsSent(true);
-    setComment('');
-    setUsername('');
-    
-    setTimeout(() => setIsSent(false), 5000);
+      if (response.ok) {
+        const savedFeedback = await response.json();
+        setFeedbacks([savedFeedback, ...feedbacks]);
+        
+        setIsSent(true);
+        setComment('');
+        setUsername('');
+        setTimeout(() => setIsSent(false), 5000);
+      }
+    } catch (error) {
+      console.error('Error posting feedback:', error);
+      // Local fallback if server is down
+      const localFeedback = { ...newFeedback, id: Date.now(), date: 'Local_Mode' };
+      const updated = [localFeedback, ...feedbacks];
+      setFeedbacks(updated);
+      localStorage.setItem('portfolio_feedbacks', JSON.stringify(updated));
+      setIsSent(true);
+      setComment('');
+      setUsername('');
+      setTimeout(() => setIsSent(false), 5000);
+    }
   };
 
   return (
