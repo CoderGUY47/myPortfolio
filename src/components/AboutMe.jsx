@@ -145,7 +145,7 @@ const AboutMe = () => {
            </h2>
            <div className="grid md:grid-cols-[1fr_auto_1fr] gap-12 items-center">
              <div className="text-sm font-mono text-foreground/60 leading-relaxed lowercase">
-                whether it’s architecting an e-commerce platform like <span className="text-white underline underline-offset-4 decoration-accent/30">epanda</span> or a p2p marketplace like <span className="text-white underline underline-offset-4 decoration-accent/30">oxpecker</span>, my focus is always on delivering measurable impact through clean, maintainable code.
+                whether it’s architecting an e-commerce platform like <span className="text-white underline underline-offset-4 decoration-accent/30">epanda</span> or a p2p marketplace like <span className="text-white underline underline-offset-4 decoration-accent/30">oxpecker</span>, my focus is always on delivering scalable and measurable impact through clean code.
              </div>
              <div className="w-px h-24 bg-white/5 hidden md:block"></div>
              <div className="text-sm font-mono text-foreground/60 leading-relaxed lowercase">
@@ -168,7 +168,7 @@ const AboutMe = () => {
           <div className="grid md:grid-cols-3 gap-6">
             {/* LinkedIn Uplink */}
             <a 
-              href="https://www.linkedin.com/in/s-m-hasan-a2122b2b1/" 
+              href="https://www.linkedin.com/in/dev-s-hasan/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="group relative p-8 border border-white/5 bg-white/2 cyber-chamfer-sm transition-all duration-500 hover:border-[#0077B5]/50 hover:bg-[#0077B5]/5 overflow-hidden"
@@ -179,7 +179,7 @@ const AboutMe = () => {
                   <FaLinkedinIn className="text-2xl" />
                 </div>
                 <span className="text-[10px] font-mono text-[#0077B5] font-black uppercase tracking-[0.3em] mb-1">Professional_ID</span>
-                <h4 className="text-lg font-heading font-black text-white uppercase tracking-tighter">dev_s_hasan</h4>
+                <h4 className="text-lg font-heading font-black text-white uppercase tracking-tight">LinkedIn_Profile</h4>
                 <div className="mt-4 w-6 h-0.5 bg-white/10 group-hover:w-16 group-hover:bg-[#0077B5] transition-all duration-500"></div>
               </div>
             </a>
@@ -198,7 +198,7 @@ const AboutMe = () => {
                   <FaEnvelope className="text-2xl" />
                 </div>
                 <span className="text-[10px] font-mono text-accent font-black uppercase tracking-[0.3em] mb-1">Direct_Inquiry</span>
-                <h4 className="text-lg font-heading font-black text-white uppercase tracking-tighter">Email_Interface</h4>
+                <h4 className="text-lg font-heading font-black text-white uppercase tracking-tight">Send Email</h4>
                 <div className="mt-4 w-6 h-0.5 bg-white/10 group-hover:w-16 group-hover:bg-accent transition-all duration-500"></div>
               </div>
             </div>
@@ -216,7 +216,7 @@ const AboutMe = () => {
                   <FaGithub className="text-2xl" />
                 </div>
                 <span className="text-[10px] font-mono text-white/40 font-black uppercase tracking-[0.3em] mb-1">Source_Code</span>
-                <h4 className="text-lg font-heading font-black text-white uppercase tracking-tighter">GitHub_Nexus</h4>
+                <h4 className="text-lg font-heading font-black text-white uppercase tracking-tight">GitHub_Profile</h4>
                 <div className="mt-4 w-6 h-0.5 bg-white/10 group-hover:w-16 group-hover:bg-white transition-all duration-500"></div>
               </div>
             </a>
