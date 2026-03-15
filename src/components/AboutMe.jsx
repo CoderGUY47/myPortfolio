@@ -145,7 +145,7 @@ const AboutMe = () => {
            </h2>
            <div className="grid md:grid-cols-[1fr_auto_1fr] gap-12 items-center">
              <div className="text-sm font-mono text-foreground/60 leading-relaxed lowercase">
-                whether it’s architecting an e-commerce platform like <span className="text-white underline underline-offset-4 decoration-accent/30">epanda</span> or a p2p marketplace like <span className="text-white underline underline-offset-4 decoration-accent/30">oxpecker</span>, my focus is always on delivering scalable and measurable impact through clean code.
+                whether it’s architecting an e-commerce platform like <a href="https://epanda-ecommerce.netlify.app/" target="_blank" rel="noopener noreferrer" className="text-white underline underline-offset-4 decoration-accent/30 hover:text-accent transition-colors">epanda</a> or a p2p marketplace like <a href="https://oxpecker.pro.bd/" target="_blank" rel="noopener noreferrer" className="text-white underline underline-offset-4 decoration-accent/30 hover:text-accent transition-colors">oxpecker</a>, my focus is always on delivering scalable and measurable impact through clean code.
              </div>
              <div className="w-px h-24 bg-white/5 hidden md:block"></div>
              <div className="text-sm font-mono text-foreground/60 leading-relaxed lowercase">
