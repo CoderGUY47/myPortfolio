@@ -51,13 +51,13 @@ const TechStack = () => {
   const [showAll, setShowAll] = React.useState(false);
 
   const coreSkills = [
-    { name: "HTML5", icon: <FaHtml5 />, percentage: 70 },
-    { name: "CSS3", icon: <FaCss3Alt />, percentage: 70 },
-    { name: "Javascript", icon: <FaJs />, percentage: 50 },
-    { name: "API JSON", icon: <FaCode />, percentage: 50 },
-    { name: "React.js", icon: <FaReact />, percentage: 60 },
-    { name: "Next.js", icon: <FaCube />, percentage: 45 },
-    { name: "TailwindCSS", icon: <SiTailwindcss />, percentage: 70 },
+    { name: "HTML5", icon: <FaHtml5 />, percentage: 60 },
+    { name: "CSS3", icon: <FaCss3Alt />, percentage: 60 },
+    { name: "Javascript", icon: <FaJs />, percentage: 35 },
+    { name: "API JSON", icon: <FaCode />, percentage: 30 },
+    { name: "React.js", icon: <FaReact />, percentage: 35 },
+    { name: "Next.js", icon: <FaCube />, percentage: 35 },
+    { name: "TailwindCSS", icon: <SiTailwindcss />, percentage: 60 },
   ];
 
   const optionalSkills = [
@@ -67,9 +67,9 @@ const TechStack = () => {
     { name: "Node.js", icon: <FaNodeJs />, percentage: 30 },
     { name: "Express.js", icon: <SiExpress />, percentage: 30 },
     { name: "Postman", icon: <SiPostman />, percentage: 30 },
-    { name: "AI Driven", icon: <FaRobot />, percentage: 88 },
-    { name: "Python", icon: <FaPython />, percentage: 40 },
-    { name: "Research", icon: <FaSearch />, percentage: 70 },
+    { name: "AI Driven", icon: <FaRobot />, percentage: 70 },
+    { name: "Python", icon: <FaPython />, percentage: 35 },
+    { name: "Research", icon: <FaSearch />, percentage: 60 },
   ];
 
   return (
@@ -108,7 +108,7 @@ const TechStack = () => {
           {coreSkills.map((skill, i) => (
             <SkillBar key={i} {...skill} />
           ))}
-          
+
           {showAll && (
             <>
               <div className="col-span-full mt-6 mb-2">
@@ -126,7 +126,7 @@ const TechStack = () => {
 
         {/*press this to see more of what i can do*/}
         <div className="mt-8 flex justify-center">
-           <button 
+           <button
              onClick={() => setShowAll(!showAll)}
              className="group relative px-8 py-3 bg-white/5 border border-white/10 cyber-chamfer-sm transition-all duration-300 hover:border-accent/50 hover:bg-accent/5"
            >
