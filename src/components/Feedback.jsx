@@ -38,13 +38,6 @@ const Feedback = () => {
     setFeedbacks(updatedFeedbacks);
     localStorage.setItem('portfolio_feedbacks', JSON.stringify(updatedFeedbacks));
 
-    // Optional: Also keep the Gmail trigger for the admin
-    const targetEmail = "s.m.hasan4599@gmail.com";
-    const subject = `New Local Feedback from ${username} - ${rating} Stars`;
-    const body = `User: ${username}\nRating: ${rating}/5\n\nFeedback:\n${comment}`;
-    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${targetEmail}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    window.open(gmailUrl, '_blank');
-
     setIsSent(true);
     setComment('');
     setUsername('');
@@ -68,7 +61,7 @@ const Feedback = () => {
               <FaArrowLeft className="text-sm" />
             </div>
             <span className="font-mono text-[10px] tracking-[0.3em] uppercase underline-offset-4 group-hover:underline">
-              Return_to_Nexus
+              Return_to_Home
             </span>
           </Link>
           <div className="hidden md:flex flex-col items-end">
@@ -80,10 +73,10 @@ const Feedback = () => {
         <div className="flex flex-col items-center mb-16">
           <div className="inline-flex items-center gap-3 px-3 py-1 bg-accent/5 border border-accent/20 rounded-sm mb-6">
              <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse"></span>
-             <span className="text-xs font-mono tracking-widest text-accent uppercase font-bold">Feedback_Initiation</span>
+             <span className="text-xs font-mono tracking-widest text-accent uppercase font-bold">Feedback_Post</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-heading font-black tracking-tighter uppercase text-white mb-4 text-center">
-             TRANSMIT_<span className="text-accent italic">VALUATION</span>
+          <h2 className="text-4xl md:text-5xl font-heading font-black tracking-tight text-white mb-4 text-center">
+             Share your_<span className="text-accent">FEEDBACK</span>
           </h2>
           <p className="text-xs md:text-sm font-mono text-foreground/40 uppercase tracking-[0.2em] text-center max-w-xl">
              your sensory data helps evaluate the stability of this digital substrate
@@ -152,7 +145,7 @@ const Feedback = () => {
               >
                  <div className="absolute inset-0 bg-white/20 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
                  <span className="relative z-10 flex items-center justify-center gap-3">
-                    {isSent ? 'VALUATION_INDEXED' : 'EXECUTE_VALUATION'}
+                    POST
                     <FaPaperPlane className={isSent ? 'animate-bounce' : 'group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform'} />
                  </span>
               </button>
