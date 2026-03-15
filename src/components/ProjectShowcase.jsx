@@ -103,7 +103,7 @@ const ProjectShowcase = () => {
       </div>
 
       {/* Bento Box Grid Container */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 px-6 max-w-[1200px] mx-auto auto-rows-fr lg:h-[700px]">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 px-6 max-w-[1200px] mx-auto auto-rows-fr lg:h-[400px]"> 
         {visibleProjects.map((project) => (
           <a
             key={project.id}
