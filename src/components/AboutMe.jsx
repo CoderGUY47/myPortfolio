@@ -54,9 +54,20 @@ const AboutMe = () => {
             <span className="text-accent font-mono text-[10px] tracking-[0.5em] block mb-4 uppercase">
               // SUBJECT_IDENTIFICATION
             </span>
-            <h1 className="text-4xl md:text-6xl font-heading font-black uppercase tracking-tighter text-white mb-6 leading-[0.9]">
-              Full-Stack <span className="text-accent italic">Developer</span> & <br/>
-              MERN Specialist
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-black uppercase tracking-tighter text-white mb-8 leading-[0.85]">
+              <div className="flex items-center gap-3 mb-2">
+                <div className="w-8 h-[2px] bg-accent/30"></div>
+                <span className="text-[10px] font-mono text-accent/60 tracking-[0.2em]">CURRENT_STATUS</span>
+              </div>
+              Frontend <span className="text-accent italic">Web Developer</span>
+              <div className="mt-4 flex flex-col md:flex-row md:items-end gap-2 md:gap-4">
+                <span className="text-xl md:text-2xl text-white/40 font-light lowercase font-mono tracking-tight">
+                  & aiming_for
+                </span>
+                <span className="text-2xl md:text-4xl text-accent-secondary italic border-b-2 border-accent-secondary/20 pb-1">
+                  MERN_Stack Architecture
+                </span>
+              </div>
             </h1>
             <div className="flex flex-wrap gap-3 mb-8">
               <div className="px-3 py-1 border border-white/10 bg-white/5 rounded-full flex items-center gap-2">
