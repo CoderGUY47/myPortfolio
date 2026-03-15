@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { 
   FaCode, FaServer, FaPaintBrush, FaRobot, 
   FaRocket, FaGraduationCap, FaEnvelope, FaGithub,
-  FaArrowLeft 
+  FaArrowLeft, FaLinkedinIn 
 } from 'react-icons/fa';
 
 const AboutMe = () => {
@@ -111,21 +111,21 @@ const AboutMe = () => {
              <FaPaintBrush className="text-accent text-3xl mb-6 group-hover:scale-110 transition-transform" />
              <h3 className="text-xs font-heading font-black text-white uppercase tracking-widest mb-3">Frontend_Mastery</h3>
              <p className="text-[10px] font-mono text-foreground/40 leading-relaxed uppercase">
-                React.js, Next.js (App Router), & TypeScript paired with Tailwind CSS and Shadcn UI.
+                HTML5, CSS3, JavaScript, React.js paired with Tailwind CSS and Shadcn UI.
              </p>
           </div>
           <div className="p-8 border border-white/5 bg-white/2 cyber-chamfer-sm group hover:border-accent/40 transition-all">
              <FaServer className="text-accent text-3xl mb-6 group-hover:scale-110 transition-transform" />
-             <h3 className="text-xs font-heading font-black text-white uppercase tracking-widest mb-3">Backend_Excellence</h3>
+             <h3 className="text-xs font-heading font-black text-white uppercase tracking-widest mb-3">Integration of Api & Json</h3>
              <p className="text-[10px] font-mono text-foreground/40 leading-relaxed uppercase">
-                Robust Node.js/Express architectures and seamless RESTful API integrations for complex workflows.
+                Robust and seamless RESTful API integrations for complex workflows.
              </p>
           </div>
           <div className="p-8 border border-white/5 bg-white/2 cyber-chamfer-sm group hover:border-accent/40 transition-all">
              <FaRocket className="text-accent text-3xl mb-6 group-hover:scale-110 transition-transform" />
              <h3 className="text-xs font-heading font-black text-white uppercase tracking-widest mb-3">Modern_UIUX</h3>
              <p className="text-[10px] font-mono text-foreground/40 leading-relaxed uppercase">
-                High-end animations with Framer Motion and Bento-grid layouts that enhance user retention.
+                High-end animations with Framer Motion and Bento-grid layouts that enhance user retention with glassmorphism.
              </p>
           </div>
           <div className="p-8 border border-white/5 bg-white/2 cyber-chamfer-sm group hover:border-accent/40 transition-all">
@@ -154,27 +154,74 @@ const AboutMe = () => {
            </div>
         </div>
 
-        {/* Call to Action Matrix */}
-        <div className="grid md:grid-cols-2 gap-8">
-           <div className="p-10 bg-accent cyber-chamfer-sm flex items-center justify-between group cursor-pointer hover:bg-white transition-all duration-500">
-              <div className="flex flex-col">
-                 <span className="text-black/60 font-mono text-[9px] font-bold uppercase tracking-widest mb-1">Direct_Uplink</span>
-                 <h4 className="text-xl font-heading font-black text-black">Email_Hasan</h4>
+        {/* Call to Action Matrix - High Interactivity */}
+        <section className="mb-24">
+          <div className="flex flex-col items-center mb-10 text-center">
+            <span className="text-accent font-mono text-[10px] tracking-[0.4em] uppercase font-bold mb-2 opacity-60 animate-pulse">
+              // READY_FOR_UPLINK
+            </span>
+            <h2 className="text-2xl md:text-3xl font-heading font-black uppercase tracking-tighter text-white">
+              Connect <span className="text-accent underline decoration-accent/20 underline-offset-8">Directly</span>
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {/* LinkedIn Uplink */}
+            <a 
+              href="https://www.linkedin.com/in/s-m-hasan-a2122b2b1/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="group relative p-8 border border-white/5 bg-white/2 cyber-chamfer-sm transition-all duration-500 hover:border-[#0077B5]/50 hover:bg-[#0077B5]/5 overflow-hidden"
+            >
+              <div className="absolute top-0 right-0 w-24 h-24 bg-[#0077B5]/5 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <div className="flex flex-col items-center text-center">
+                <div className="w-14 h-14 border border-white/10 flex items-center justify-center cyber-chamfer-xs mb-6 group-hover:bg-[#0077B5] group-hover:text-white group-hover:border-transparent transition-all duration-500 shadow-lg group-hover:shadow-[#0077B5]/20">
+                  <FaLinkedinIn className="text-2xl" />
+                </div>
+                <span className="text-[10px] font-mono text-[#0077B5] font-black uppercase tracking-[0.3em] mb-1">Professional_ID</span>
+                <h4 className="text-lg font-heading font-black text-white uppercase tracking-tighter">dev_s_hasan</h4>
+                <div className="mt-4 w-6 h-0.5 bg-white/10 group-hover:w-16 group-hover:bg-[#0077B5] transition-all duration-500"></div>
               </div>
-              <a href="mailto:s.m.hasan4599@gmail.com" className="w-12 h-12 border border-black/20 flex items-center justify-center cyber-chamfer-xs group-hover:bg-black group-hover:text-white transition-all">
-                <FaEnvelope />
-              </a>
-           </div>
-           <div className="p-10 border border-white/10 bg-white/5 cyber-chamfer-sm flex items-center justify-between group cursor-pointer hover:border-accent/40 transition-all duration-500">
-              <div className="flex flex-col">
-                 <span className="text-white/40 font-mono text-[9px] uppercase tracking-widest mb-1">Source_Code</span>
-                 <h4 className="text-xl font-heading font-black text-white">GitHub_Nexus</h4>
+            </a>
+
+            {/* Email / Gmail Uplink */}
+            <div 
+              onClick={() => {
+                const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=s.m.hasan4599@gmail.com&su=Project%20Inquiry%20from%20Portfolio&body=Hello%20S.M.%20Hasan,%20I%20would%20like%20to%20discuss%20a%20project%20with%20you.`;
+                window.open(gmailUrl, '_blank');
+              }}
+              className="group relative p-8 border border-white/5 bg-white/2 cyber-chamfer-sm transition-all duration-500 hover:border-accent/50 hover:bg-accent/5 overflow-hidden cursor-pointer"
+            >
+              <div className="absolute top-0 right-0 w-24 h-24 bg-accent/5 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <div className="flex flex-col items-center text-center">
+                <div className="w-14 h-14 border border-white/10 flex items-center justify-center cyber-chamfer-xs mb-6 group-hover:bg-accent group-hover:text-black group-hover:border-transparent transition-all duration-500 shadow-lg group-hover:shadow-accent/20">
+                  <FaEnvelope className="text-2xl" />
+                </div>
+                <span className="text-[10px] font-mono text-accent font-black uppercase tracking-[0.3em] mb-1">Direct_Inquiry</span>
+                <h4 className="text-lg font-heading font-black text-white uppercase tracking-tighter">Email_Interface</h4>
+                <div className="mt-4 w-6 h-0.5 bg-white/10 group-hover:w-16 group-hover:bg-accent transition-all duration-500"></div>
               </div>
-              <a href="https://github.com/coderguy47" target="_blank" rel="noopener noreferrer" className="w-12 h-12 border border-white/10 flex items-center justify-center cyber-chamfer-xs group-hover:bg-accent group-hover:text-black transition-all">
-                <FaGithub />
-              </a>
-           </div>
-        </div>
+            </div>
+
+            {/* GitHub Source Uplink */}
+            <a 
+              href="https://github.com/coderguy47" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="group relative p-8 border border-white/5 bg-white/2 cyber-chamfer-sm transition-all duration-500 hover:border-white/40 hover:bg-white/5 overflow-hidden"
+            >
+              <div className="absolute top-0 right-0 w-24 h-24 bg-white/5 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <div className="flex flex-col items-center text-center">
+                <div className="w-14 h-14 border border-white/10 flex items-center justify-center cyber-chamfer-xs mb-6 group-hover:bg-white group-hover:text-black group-hover:border-transparent transition-all duration-500 shadow-lg group-hover:shadow-white/10">
+                  <FaGithub className="text-2xl" />
+                </div>
+                <span className="text-[10px] font-mono text-white/40 font-black uppercase tracking-[0.3em] mb-1">Source_Code</span>
+                <h4 className="text-lg font-heading font-black text-white uppercase tracking-tighter">GitHub_Nexus</h4>
+                <div className="mt-4 w-6 h-0.5 bg-white/10 group-hover:w-16 group-hover:bg-white transition-all duration-500"></div>
+              </div>
+            </a>
+          </div>
+        </section>
       </div>
       
       {/* Decorative HUD Details */}
