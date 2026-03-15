@@ -77,8 +77,8 @@ const Hero = () => {
           </Parallax>
         </div>
 
-        {/* Persona Profile HUD - Image now on top on Mobile */}
-        <div className="flex-1 relative w-full flex justify-center lg:justify-end group">
+        {/* Persona Profile HUD - Visible only on Desktop (LG+) */}
+        <div className="flex-1 relative w-full hidden lg:flex justify-center lg:justify-end group">
           <div className="relative w-full max-w-[550px] aspect-square cyber-chamfer-sm border border-accent md:border-white/5 bg-white/2 p-3 transition-all duration-700 lg:group-hover:border-accent/40 lg:group-hover:bg-white/5 lg:group-hover:shadow-[0_0_50px_rgba(0,255,136,0.1)]">
             {/* Background Kinetic Glow */}
             <div className="absolute inset-0 bg-accent/2 opacity-20 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity blur-3xl pointer-events-none"></div>
