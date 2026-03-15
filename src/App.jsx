@@ -3,6 +3,7 @@ import React from "react";
 import Navbar from "./components/Navbar";
 import Parallax from "./components/Parallax";
 import Hero from "./components/Hero";
+import AboutMe from "./components/AboutMe";
 import TechStack from "./components/TechStack";
 import Capabilities from "./components/Capabilities";
 import ProjectShowcase from "./components/ProjectShowcase";
@@ -35,6 +36,7 @@ function App() {
 
         <main className="space-y-10 md:space-y-10 overflow-x-hidden pt-12">
           <Hero />
+          <AboutMe />
           <TechStack />
           <div className="space-y-10 md:space-y-10 px-4 sm:px-6 lg:px-10 pb-14">
             <div className="space-y-12">

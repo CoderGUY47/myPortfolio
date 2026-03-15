@@ -5,9 +5,10 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   
   const links = [
-    { name: "Projects", href: "#projects", code: "01" },
-    { name: "Experience", href: "#experience", code: "02" },
-    { name: "Education", href: "#education", code: "03" },
+    { name: "About", href: "#about", code: "01" },
+    { name: "Projects", href: "#projects", code: "02" },
+    { name: "Experience", href: "#experience", code: "03" },
+    { name: "Education", href: "#education", code: "04" },
   ];
 
   return (
@@ -66,7 +67,7 @@ const Navbar = () => {
           >
             <div className="absolute top-0 left-0 w-full h-px bg-accent/50 -translate-x-full group-hover:translate-x-0 transition-transform duration-500"></div>
             <span className="text-[7px] font-mono mb-0.5 text-accent/40 group-hover:text-accent transition-colors">
-              [04]
+              [05]
             </span>
             <span className="text-[9px] font-heading font-bold tracking-[0.2em]">
               HIRE_ME

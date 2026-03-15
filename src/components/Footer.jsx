@@ -19,6 +19,7 @@ const Footer = () => {
 
         {/* Navigation Links */}
         <div className="flex flex-wrap justify-center gap-6 md:gap-8 text-[10px] font-mono tracking-[0.2em] text-foreground/50 uppercase">
+          <a href="#about" className="hover:text-accent transition-colors">About</a>
           <a href="#projects" className="hover:text-accent transition-colors">Projects</a>
           <a href="#experience" className="hover:text-accent transition-colors">Experience</a>
           <a href="#education" className="hover:text-accent transition-colors">Academic</a>
