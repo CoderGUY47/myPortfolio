@@ -7,6 +7,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
 import AboutMe from "./components/AboutMe";
+import Feedback from "./components/Feedback";
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<AboutMe />} />
+            <Route path="/feedback" element={<Feedback />} />
           </Routes>
 
           <Footer />

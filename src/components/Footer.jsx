@@ -30,8 +30,7 @@ const Footer = () => {
         <div className="flex flex-wrap justify-center gap-6 md:gap-8 text-[10px] font-mono tracking-[0.2em] text-foreground/50 uppercase">
           <Link to="/about" className="hover:text-accent transition-colors">About</Link>
           <a href={getLinkHref("#projects")} className="hover:text-accent transition-colors">Projects</a>
-          <a href={getLinkHref("#experience")} className="hover:text-accent transition-colors">Experience</a>
-          <a href={getLinkHref("#education")} className="hover:text-accent transition-colors">Academic</a>
+          <Link to="/feedback" className="hover:text-accent transition-colors">Feedback</Link>
         </div>
 
         {/* Copyright */}

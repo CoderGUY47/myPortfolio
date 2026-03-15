@@ -6,7 +6,6 @@ import ProjectShowcase from "./ProjectShowcase";
 import Protocol from "./Protocol";
 import Contact from "./Contact";
 import Experience from "./Experience";
-import Feedback from "./Feedback";
 
 const Home = () => {
   return (
@@ -21,7 +20,6 @@ const Home = () => {
         <Experience />
         <Capabilities />
         <Contact />
-        <Feedback />
       </div>
     </main>
   );

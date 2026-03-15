@@ -10,8 +10,7 @@ const Navbar = () => {
   const links = [
     { name: "About", href: "/about", code: "01", isRoute: true },
     { name: "Projects", href: "#projects", code: "02" },
-    { name: "Experience", href: "#experience", code: "03" },
-    { name: "Education", href: "#education", code: "04" },
+    { name: "Feedback", href: "/feedback", code: "03", isRoute: true },
   ];
 
   const getLinkHref = (href) => {
