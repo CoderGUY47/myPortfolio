@@ -47,23 +47,28 @@ const SkillBar = ({ name, icon, percentage }) => {
 };
 
 const TechStack = () => {
-  const skills = [
-    { name: "HTML5", icon: <FaHtml5 />, percentage: 95 },
-    { name: "CSS3", icon: <FaCss3Alt />, percentage: 90 },
-    { name: "Javascript", icon: <FaJs />, percentage: 88 },
-    { name: "React.js", icon: <FaReact />, percentage: 92 },
-    { name: "Next.js", icon: <FaCube />, percentage: 80 },
-    { name: "TailwindCSS", icon: <SiTailwindcss />, percentage: 95 },
-    { name: "Node.js", icon: <FaNodeJs />, percentage: 85 },
-    { name: "Express.js", icon: <SiExpress />, percentage: 75 },
-    { name: "Adobe Illustrator", icon: <FaPalette />, percentage: 85 },
+  const [showAll, setShowAll] = React.useState(false);
+
+  const coreSkills = [
+    { name: "HTML5", icon: <FaHtml5 />, percentage: 70 },
+    { name: "CSS3", icon: <FaCss3Alt />, percentage: 70 },
+    { name: "Javascript", icon: <FaJs />, percentage: 60 },
+    { name: "API JSON", icon: <FaCode />, percentage: 50 },
+    { name: "React.js", icon: <FaReact />, percentage: 50 },
+    { name: "Next.js", icon: <FaCube />, percentage: 50 },
+    { name: "TailwindCSS", icon: <SiTailwindcss />, percentage: 80 },
+  ];
+
+  const optionalSkills = [
+    { name: "Adobe Illustrator", icon: <FaPalette />, percentage: 90 },
     { name: "MongoDB", icon: <FaDatabase />, percentage: 70 },
-    { name: "Typescript", icon: <SiTypescript />, percentage: 78 },
-    { name: "Postman", icon: <SiPostman />, percentage: 85 },
-    { name: "API JSON", icon: <FaCode />, percentage: 92 },
+    { name: "Typescript", icon: <SiTypescript />, percentage: 30 },
+    { name: "Node.js", icon: <FaNodeJs />, percentage: 30 },
+    { name: "Express.js", icon: <SiExpress />, percentage: 30 },
+    { name: "Postman", icon: <SiPostman />, percentage: 30 },
     { name: "AI Driven", icon: <FaRobot />, percentage: 88 },
-    { name: "Python", icon: <FaPython />, percentage: 70 },
-    { name: "Research", icon: <FaSearch />, percentage: 82 },
+    { name: "Python", icon: <FaPython />, percentage: 60 },
+    { name: "Research", icon: <FaSearch />, percentage: 70 },
   ];
 
   return (
@@ -99,9 +104,37 @@ const TechStack = () => {
 
       <Parallax speed={0.05} className="w-full">
         <div className="grid grid-cols-2 lg:grid-cols-2 gap-2 md:gap-4 max-w-4xl mx-auto">
-          {skills.map((skill, i) => (
+          {coreSkills.map((skill, i) => (
             <SkillBar key={i} {...skill} />
           ))}
+          
+          {showAll && optionalSkills.map((skill, i) => (
+            <SkillBar key={`optional-${i}`} {...skill} />
+          ))}
+        </div>
+
+        {/* See More Trigger */}
+        <div className="mt-8 flex justify-center">
+           <button 
+             onClick={() => setShowAll(!showAll)}
+             className="group relative px-8 py-3 bg-white/5 border border-white/10 cyber-chamfer-sm transition-all duration-300 hover:border-accent/50 hover:bg-accent/5"
+           >
+              <div className="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-accent/30 to-transparent"></div>
+              <div className="flex items-center gap-4">
+                 <div className="flex flex-col items-end">
+                    <span className="text-[7px] font-mono text-white/40 uppercase tracking-widest leading-none">Status</span>
+                    <span className="text-[10px] font-heading font-black text-accent uppercase tracking-widest">{showAll ? 'COLLAPSE' : 'EXPAND'}</span>
+                 </div>
+                 <div className="w-px h-6 bg-white/10 group-hover:bg-accent/30 transition-colors"></div>
+                 <span className="text-xs font-heading font-black text-white uppercase tracking-[0.2em]">
+                    {showAll ? 'LESS_MODULES' : 'SEE_OPTIONAL_SKILLS'}
+                 </span>
+                 <div className={`text-accent text-sm transition-transform duration-500 ${showAll ? 'rotate-180' : 'rotate-0'}`}>
+                    <FaRobot className="animate-pulse" />
+                 </div>
+              </div>
+              <div className="absolute inset-x-0 bottom-0 h-px bg-linear-to-r from-transparent via-accent/30 to-transparent"></div>
+           </button>
         </div>
       </Parallax>
     </section>
