@@ -153,7 +153,6 @@
 @layer utilities {
   .cyber-glitch {
     position: relative;
-    animation: glitch 1s linear infinite;
   }
 
   .cyber-glitch::before,
@@ -162,20 +161,32 @@
     position: absolute;
     inset: 0;
     background: inherit;
+    display: none;
   }
 
-  .cyber-glitch::before {
-    left: 2px;
-    text-shadow: -1px 0 #ff00ff;
-    clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
-    animation: glitch 2.5s linear infinite reverse;
-  }
+  @media (min-width: 1024px) {
+    .cyber-glitch {
+      animation: glitch 1s linear infinite;
+    }
 
-  .cyber-glitch::after {
-    left: -2px;
-    text-shadow: -1px 0 #00d4ff;
-    clip-path: polygon(0 55%, 100% 55%, 100% 100%, 0 100%);
-    animation: glitch 3s linear infinite;
+    .cyber-glitch::before,
+    .cyber-glitch::after {
+      display: block;
+    }
+
+    .cyber-glitch::before {
+      left: 2px;
+      text-shadow: -1px 0 #ff00ff;
+      clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+      animation: glitch 2.5s linear infinite reverse;
+    }
+
+    .cyber-glitch::after {
+      left: -2px;
+      text-shadow: -1px 0 #00d4ff;
+      clip-path: polygon(0 55%, 100% 55%, 100% 100%, 0 100%);
+      animation: glitch 3s linear infinite;
+    }
   }
 
   .cyber-chamfer {

@@ -52,7 +52,7 @@ const Hero = () => {
                 stay fast, synchronized, and scalable.
               </span>{" "}
               <br />
-              🖇️ UNDERSTANDING YOUR VIA COMMUNICATION, <br />I CAN GET
+              🖇️ UNDERSTANDING YOUR expectation, <br />I CAN GET
               YOU A BETTER OUTPUT without lag. <br />{" "}
             </p>
 
