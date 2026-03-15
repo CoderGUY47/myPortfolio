@@ -4,11 +4,15 @@ const Contact = () => {
   const [email, setEmail] = React.useState('');
 
   const handleSend = () => {
-    if (email) {
-      window.location.href = `mailto:s.m.hasan4599@gmail.com?subject=Project Inquiry from ${email}&body=Hello S.M. Hasan, I would like to discuss a project with you.`;
-    } else {
-      window.location.href = `mailto:s.m.hasan4599@gmail.com?subject=Project Inquiry&body=Hello S.M. Hasan, I would like to discuss a project with you.`;
-    }
+    const targetEmail = "s.m.hasan4599@gmail.com";
+    const subject = email ? `Project Inquiry from ${email}` : "Project Inquiry";
+    const body = "Hello S.M. Hasan, I would like to discuss a project with you.";
+    
+    // Direct Gmail Compose URL
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${targetEmail}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    
+    // Open in new tab
+    window.open(gmailUrl, '_blank');
   };
 
   return (

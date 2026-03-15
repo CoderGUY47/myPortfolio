@@ -114,14 +114,14 @@ const Protocol = () => {
                 <div className="flex-1 w-full max-w-sm md:max-w-md">
                   <div
                     className={`
-                      relative p-8 border border-white/5 bg-background/80 backdrop-blur-md cyber-chamfer-sm transition-all duration-700 
-                      hover:border-accent/40 hover:bg-card/40 hover:shadow-[0_0_40px_rgba(0,255,136,0.05)]
-                      ${scrollProgress > i / (steps.length - 1) ? "border-accent/20" : ""}
+                      relative p-8 border border-accent md:border-white/5 bg-background/80 backdrop-blur-md cyber-chamfer-sm transition-all duration-700 
+                      lg:hover:border-accent/40 lg:hover:bg-card/40 hover:shadow-[0_0_40px_rgba(0,255,136,0.05)]
+                      ${scrollProgress > i / (steps.length - 1) ? "border-accent" : ""}
                    `}
                   >
                     {/* Corner Accents */}
-                    <div className="absolute top-0 left-0 w-4 h-4 border-t border-l border-white/10 group-hover:border-accent transition-colors duration-500"></div>
-                    <div className="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-white/10 group-hover:border-accent transition-colors duration-500"></div>
+                    <div className="absolute top-0 left-0 w-4 h-4 border-t border-l border-accent md:border-white/10 lg:group-hover:border-accent transition-colors duration-500"></div>
+                    <div className="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-accent md:border-white/10 lg:group-hover:border-accent transition-colors duration-500"></div>
 
                     <div className="flex justify-between items-start mb-4">
                       <span className="text-accent font-mono text-[9px] font-bold tracking-[0.2em] px-2 py-0.5 bg-accent/10 border border-accent/20 uppercase">

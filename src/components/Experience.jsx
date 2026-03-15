@@ -35,7 +35,7 @@ const Experience = () => {
         {experiences.map((exp, i) => (
           <div 
             key={i}
-            className="group relative flex flex-col md:flex-row items-start gap-6 p-6 border border-white/5 bg-card/20 cyber-chamfer-sm hover:border-accent-secondary/40 hover:bg-white/1 transition-all duration-500"
+            className="group relative flex flex-col md:flex-row items-start gap-6 p-6 border border-accent-secondary md:border-white/5 bg-card/20 cyber-chamfer-sm lg:hover:border-accent-secondary/40 lg:hover:bg-white/1 transition-all duration-500"
           >
             {/* Period Sidebar */}
             <div className="md:w-1/5 flex flex-col">

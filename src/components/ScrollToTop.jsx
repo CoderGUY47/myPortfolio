@@ -44,21 +44,26 @@ const ScrollToTop = () => {
 
   return (
     <div
-      className={`fixed bottom-6 right-6 md:bottom-10 md:right-10 z-50 transition-all duration-100 ease-in-out ${
-        isVisible ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-10 scale-90 pointer-events-none"
+      className={`fixed bottom-10 right-10 z-[100] transition-all duration-500 ease-out ${
+        isVisible ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-10 scale-50 pointer-events-none"
       }`}
     >
       <button
         onClick={scrollToTop}
-        className="relative w-12 h-12 bg-black/80 backdrop-blur-xl border border-accent/30 text-accent flex items-center justify-center hover:bg-accent hover:text-black hover:shadow-neon hover:border-accent group cyber-chamfer-sm shadow-[0_0_20px_rgba(0,0,0,0.5)] transition-all duration-100"
+        className="relative w-14 h-14 md:w-16 md:h-16 bg-black border-2 border-accent text-accent flex items-center justify-center hover:bg-accent hover:text-black hover:shadow-neon group cyber-chamfer shadow-[0_0_30px_rgba(0,255,136,0.3)] transition-all duration-300 active:scale-90"
         aria-label="Scroll to Top"
       >
         {/* Kinetic Targeting Accents */}
-        <span className="w-1.5 h-1.5 bg-accent absolute top-1 left-1 group-hover:bg-black transition-colors duration-100"></span>
-        <span className="w-1.5 h-1.5 bg-accent absolute bottom-1 right-1 group-hover:bg-black transition-colors duration-100"></span>
+        <div className="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-accent group-hover:border-black transition-colors"></div>
+        <div className="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-accent group-hover:border-black transition-colors"></div>
         
         {/* Animated Arrow */}
-        <FaArrowUp className="text-sm group-hover:-translate-y-1 transition-transform duration-100" />
+        <FaArrowUp className="text-xl group-hover:-translate-y-2 transition-transform duration-300" />
+        
+        {/* HUD Decoration */}
+        <span className="absolute -top-4 right-0 text-[8px] font-mono text-accent opacity-60 pointer-events-none hidden md:block">
+          NAV_ASCEND
+        </span>
       </button>
     </div>
   );

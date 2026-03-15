@@ -1,8 +1,10 @@
-import React from "react";
-import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import React, { useState } from "react";
+import { FaExternalLinkAlt, FaPlus } from "react-icons/fa";
 import Parallax from "./Parallax";
 
 const ProjectShowcase = () => {
+  const [showAll, setShowAll] = useState(false);
+
   const projects = [
     {
       id: "PRJ_01",
@@ -66,6 +68,8 @@ const ProjectShowcase = () => {
     }
   ];
 
+  const visibleProjects = showAll ? projects : projects.slice(0, 2);
+
   return (
     <section id="projects" className="py-24 relative overflow-hidden">
       {/* Industrial Header */}
@@ -81,12 +85,9 @@ const ProjectShowcase = () => {
         </h2>
         {/* Advanced Cybernetic Alignment Underline */}
         <div className="flex items-center justify-center w-full max-w-md mt-6 opacity-90">
-          {/* Left Beam (Shoots outward to the left) */}
           <div className="flex-1 h-px bg-linear-to-r from-transparent to-accent/20 relative overflow-hidden rotate-180 cyber-chamfer">
             <div className="absolute inset-0 w-[200%] bg-linear-to-r from-transparent via-accent to-transparent animate-[sweep_2s_ease-in-out_infinite]"></div>
           </div>
-
-          {/* Core Synchronization Node */}
           <div className="mx-4 flex items-center gap-2">
             <div className="w-1 h-3 bg-accent/50 -skew-x-12"></div>
             <div className="relative w-3 h-3 flex items-center justify-center border border-accent rotate-45 shadow-neon">
@@ -95,31 +96,33 @@ const ProjectShowcase = () => {
             </div>
             <div className="w-1 h-3 bg-accent/50 skew-x-12"></div>
           </div>
-
-          {/* Right Beam (Shoots outward to the right) */}
           <div className="flex-1 h-px bg-linear-to-r from-transparent to-accent/20 relative overflow-hidden cyber-chamfer">
             <div className="absolute inset-0 w-[200%] bg-linear-to-r from-transparent via-accent to-transparent animate-[sweep_2s_ease-in-out_infinite]"></div>
           </div>
         </div>
       </div>
 
-      {/* 700px High Bento Box Grid Container */}
-      <div className="grid grid-cols-1 grid-rows-5 md:grid-cols-2 md:grid-rows-3 lg:grid-cols-4 lg:grid-rows-2 gap-4 h-[700px] w-full max-w-[1200px] mx-auto px-6">
-        {projects.map((project) => (
+      {/* Bento Box Grid Container */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 px-6 max-w-[1200px] mx-auto auto-rows-fr lg:h-[700px]">
+        {visibleProjects.map((project) => (
           <a
             key={project.id}
             href={project.live}
             target="_blank"
             rel="noopener noreferrer"
-            className={`group relative bg-card/10 border border-white/5 cyber-chamfer-sm overflow-hidden hover:border-accent/40 transition-all duration-700 shadow-[0_0_50px_rgba(0,0,0,0.5)] flex flex-col justify-end ${project.gridClass}`}
+            className={`
+              group relative bg-card/10 border border-accent md:border-white/5 cyber-chamfer-sm overflow-hidden 
+              aspect-square md:aspect-auto hover:border-accent/40 transition-all duration-700 shadow-[0_0_50px_rgba(0,0,0,0.5)] 
+              flex flex-col justify-end ${project.gridClass}
+            `}
           >
-            {/* Background Image absolute coverage with Parallax Effect */}
+            {/* Background Image with Parallax */}
             <div className="absolute inset-0 z-0">
               <Parallax speed={-0.1} className="w-full h-full">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className={`max-w-none brightness-90 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-1000 group-hover:scale-105 ${
+                  className={`max-w-none brightness-100 md:brightness-90 md:group-hover:grayscale-0 md:group-hover:brightness-100 transition-all duration-1000 group-hover:scale-105 ${
                     project.isFocus 
                       ? "w-full h-full object-contain p-4" 
                       : "w-[120%] h-[120%] -mt-[10%] -ml-[10%] object-cover"
@@ -128,8 +131,8 @@ const ProjectShowcase = () => {
               </Parallax>
             </div>
 
-            {/* Targeting Overlays */}
-            <div className="absolute inset-0 z-20 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+            {/* Targeting Overlays - Persistent on Mobile */}
+            <div className="absolute inset-0 z-20 pointer-events-none opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-700">
               <div className="absolute top-4 left-4 w-4 h-4 border-t border-l border-accent"></div>
               <div className="absolute top-4 right-4 w-4 h-4 border-t border-r border-accent"></div>
               <div className="absolute bottom-4 left-4 w-4 h-4 border-b border-l border-accent"></div>
@@ -138,50 +141,45 @@ const ProjectShowcase = () => {
 
             {/* Metadata Tags */}
             <div className="absolute top-4 left-4 z-30">
-              <span className="text-[10px] font-heading font-black text-accent tracking-[0.2em] bg-black/60 px-2 py-1 backdrop-blur-sm border border-accent/20">
+              <span className="text-[8px] md:text-[10px] font-heading font-black text-accent tracking-[0.2em] bg-black/60 px-2 py-1 backdrop-blur-sm border border-accent/20">
                 {project.id}
-              </span>
-            </div>
-            <div className="absolute top-4 right-4 z-30 hidden sm:block">
-              <span className="text-[8px] font-mono text-white font-bold tracking-widest uppercase bg-black/60 px-2 py-1 backdrop-blur-sm border border-white/10">
-                {project.stream}
               </span>
             </div>
 
             {/* Hover Action Blur Overlay */}
             <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center gap-4 backdrop-blur-sm z-40">
-              <div
-                className="p-3 bg-accent text-black scale-110 active:scale-95 transition-all cyber-chamfer-sm shadow-neon btn-shine"
-                title="Live Preview"
-              >
+              <div className="p-3 bg-accent text-black scale-110 active:scale-95 transition-all cyber-chamfer-sm shadow-neon">
                 <FaExternalLinkAlt />
               </div>
             </div>
 
-            {/* Text Overlay Substrate */}
+            {/* Text Overlay */}
             <div className="relative z-10 w-full p-4 md:p-6 bg-linear-to-t from-black via-black/90 to-transparent pt-16 pointer-events-none">
-              <h3 className="text-sm md:text-lg font-heading font-black text-white uppercase tracking-tight mb-1 group-hover:text-accent transition-colors leading-none truncate drop-shadow-lg">
+              <h3 className="text-sm md:text-lg font-heading font-black text-white uppercase tracking-tight mb-1 group-hover:text-accent transition-colors truncate drop-shadow-lg">
                 {project.title}
               </h3>
-
-              {project.isFocus ? (
-                <p className="text-[9px] md:text-[10px] font-medium text-foreground/50 leading-relaxed uppercase tracking-wider line-clamp-1 md:line-clamp-2 mt-2">
-                  {project.desc}
-                </p>
-              ) : (
-                <div className="flex items-center gap-2 mt-2 opacity-50">
-                  <span className="text-[7px] font-mono text-white tracking-widest">
-                    {project.difficulty}_SCALE
-                  </span>
-                </div>
-              )}
+              <p className="text-[9px] md:text-[10px] font-medium text-foreground/50 leading-relaxed uppercase tracking-wider line-clamp-1 mt-1 transition-opacity">
+                {project.desc}
+              </p>
             </div>
 
             {/* Interactive Scanning Line */}
-            <div className="absolute top-0 left-0 w-full h-[2px] bg-accent/40 shadow-[0_0_15px_rgba(0,255,136,0.8)] -translate-y-full group-hover:animate-[scan_3s_ease-in-out_infinite] pointer-events-none z-50"></div>
+            <div className="absolute top-0 left-0 w-full h-[2px] bg-accent/40 shadow-[0_0_15px_rgba(0,255,136,0.8)] -translate-y-full md:group-hover:animate-[scan_3s_ease-in-out_infinite] pointer-events-none z-50"></div>
           </a>
         ))}
       </div>
+
+      {!showAll && projects.length > 2 && (
+        <div className="flex justify-center mt-12 px-6">
+          <button
+            onClick={() => setShowAll(true)}
+            className="group flex items-center gap-3 px-8 py-3 bg-accent/10 border border-accent text-accent font-heading font-black uppercase tracking-widest cyber-chamfer-sm hover:bg-accent hover:text-black transition-all duration-500 shadow-neon"
+          >
+            <FaPlus className="text-xs group-hover:rotate-90 transition-transform duration-500" />
+            See More Projects
+          </button>
+        </div>
+      )}
     </section>
   );
 };

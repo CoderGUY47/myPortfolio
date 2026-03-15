@@ -5,7 +5,7 @@ const Footer = () => {
 
   return (
     <footer className="py-12 mt-24 border-t border-white/5 relative bg-background">
-      <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8">
+      <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
         
         {/* Brand */}
         <div className="flex flex-col items-center md:items-start group cursor-default">
@@ -18,10 +18,10 @@ const Footer = () => {
         </div>
 
         {/* Navigation Links */}
-        <div className="flex gap-8 text-[10px] font-mono tracking-[0.2em] text-foreground/50 uppercase">
-          <a href="#work" className="hover:text-accent transition-colors">Projects</a>
+        <div className="flex flex-wrap justify-center gap-6 md:gap-8 text-[10px] font-mono tracking-[0.2em] text-foreground/50 uppercase">
+          <a href="#projects" className="hover:text-accent transition-colors">Projects</a>
+          <a href="#experience" className="hover:text-accent transition-colors">Experience</a>
           <a href="#education" className="hover:text-accent transition-colors">Academic</a>
-          <a href="#contact" className="hover:text-accent transition-colors">Contact</a>
         </div>
 
         {/* Copyright */}

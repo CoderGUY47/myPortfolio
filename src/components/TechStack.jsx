@@ -6,13 +6,11 @@ import {
   FaJs,
   FaReact,
   FaNodeJs,
-  FaTerminal,
   FaDatabase,
   FaPalette,
   FaCube,
   FaCode,
   FaRobot,
-  FaBrain,
   FaPython,
 } from "react-icons/fa";
 import {
@@ -25,21 +23,21 @@ import Parallax from "./Parallax";
 
 const SkillBar = ({ name, icon, percentage }) => {
   return (
-    <div className="flex flex-col gap-2 p-4 border border-white/5 bg-card/20 cyber-chamfer-sm group hover:border-accent/40 transition-all duration-500">
+    <div className="flex flex-col gap-2 p-3 md:p-4 border border-accent md:border-white/5 bg-card/20 cyber-chamfer-sm group lg:hover:border-accent/40 transition-all duration-500">
       <div className="flex items-center justify-between">
-        <div className="flex items-center gap-3">
-          <span className="text-xl text-accent/60 group-hover:text-accent transition-all duration-500">
+        <div className="flex items-center gap-2 md:gap-3">
+          <span className="text-lg md:text-xl text-accent lg:text-accent/60 lg:group-hover:text-accent transition-all duration-500">
             {icon}
           </span>
-          <span className="text-[10px] md:text-xs font-heading font-black text-white uppercase tracking-widest whitespace-nowrap">
+          <span className="text-[8px] md:text-xs font-heading font-black text-white uppercase tracking-widest whitespace-nowrap">
             {name}
           </span>
         </div>
       </div>
 
-      <div className="skill-loader-container border-white/20">
+      <div className="skill-loader-container border-white/20 h-2 md:h-1.5 overflow-hidden bg-white/5">
         <div
-          className="skill-progress-fill bg-accent shadow-[0_0_10px_rgba(0, 255, 136, 0.3)]"
+          className="skill-progress-fill bg-accent shadow-[0_0_10px_rgba(0, 255, 136, 0.3)] h-full transition-all duration-1000 ease-out"
           style={{ "--target-width": `${percentage}%` }}
           data-percentage={`${percentage}%`}
         ></div>
@@ -63,13 +61,13 @@ const TechStack = () => {
     { name: "Typescript", icon: <SiTypescript />, percentage: 78 },
     { name: "Postman", icon: <SiPostman />, percentage: 85 },
     { name: "API JSON", icon: <FaCode />, percentage: 92 },
-    { name: "AI Driven Logic", icon: <FaRobot />, percentage: 88 },
+    { name: "AI Driven", icon: <FaRobot />, percentage: 88 },
     { name: "Python", icon: <FaPython />, percentage: 70 },
-    { name: "Research Analytics", icon: <FaSearch />, percentage: 82 },
+    { name: "Research", icon: <FaSearch />, percentage: 82 },
   ];
 
   return (
-    <section className="py-12 relative overflow-hidden px-4 sm:px-6 lg:px-10">
+    <section className="py-12 relative overflow-hidden px-4 md:px-6 lg:px-10">
       {/* Industrial Section Header */}
       <div className="flex flex-col items-center mb-10 text-center">
         <div className="flex items-center gap-3 mb-4">
@@ -100,7 +98,7 @@ const TechStack = () => {
       </div>
 
       <Parallax speed={0.05} className="w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-4 max-w-4xl mx-auto">
+        <div className="grid grid-cols-2 lg:grid-cols-2 gap-2 md:gap-4 max-w-4xl mx-auto">
           {skills.map((skill, i) => (
             <SkillBar key={i} {...skill} />
           ))}

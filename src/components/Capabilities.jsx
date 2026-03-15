@@ -94,15 +94,15 @@ const Capabilities = () => {
       </div>
 
       {/* High-End Services Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-8 px-4 md:px-0">
         {services.map((item, i) => (
           <div
             key={i}
-            className="group relative p-10 bg-gray-900/20 border border-white/15 cyber-chamfer-sm transition-all duration-700 hover:border-accent/40 hover:bg-card/40 flex flex-col items-center text-center overflow-hidden"
+            className="group relative p-6 md:p-10 bg-gray-900/20 border border-accent md:border-white/15 cyber-chamfer-sm transition-all duration-700 lg:hover:border-accent/40 lg:hover:bg-card/40 flex flex-col items-center text-center overflow-hidden"
           >
             {/* Background Kinetic Circuitry (Hover Only) */}
             <div
-              className="absolute inset-0 opacity-0 group-hover:opacity-[0.03] transition-opacity duration-700 pointer-events-none"
+              className="absolute inset-0 opacity-5 md:opacity-0 lg:group-hover:opacity-[0.03] transition-opacity duration-700 pointer-events-none"
               style={{
                 backgroundImage:
                   "radial-gradient(circle at 1px 1px, #00ff88 1px, transparent 0)",
@@ -110,34 +110,34 @@ const Capabilities = () => {
               }}
             ></div>
 
-            {/* Corner ID Label */}
-            <div className="absolute top-4 left-4 text-[7px] font-mono text-white/10 group-hover:text-accent transition-colors">
+            {/* Corner ID Label - Persistent on Mobile */}
+            <div className="absolute top-2 left-2 md:top-4 md:left-4 text-[6px] md:text-[7px] font-mono text-accent md:text-white/10 lg:group-hover:text-accent transition-colors">
               {item.id}
             </div>
 
             {/* Icon Protocol Container */}
-            <div className="relative mb-8">
-              <div className="absolute inset-0 bg-accent/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
-              <div className="w-16 h-16 border border-white/10 flex items-center justify-center text-2xl text-foreground/20 group-hover:text-accent group-hover:border-accent group-hover:shadow-[0_0_30px_rgba(0,255,136,0.3)] bg-background/50 transition-all duration-500 relative z-10">
+            <div className="relative mb-4 md:mb-8">
+              <div className="absolute inset-0 bg-accent/20 blur-xl md:opacity-0 lg:group-hover:opacity-100 transition-opacity"></div>
+              <div className="w-12 h-12 md:w-16 md:h-16 border border-accent md:border-white/10 flex items-center justify-center text-xl md:text-2xl text-accent md:text-foreground/20 lg:group-hover:text-accent lg:group-hover:border-accent lg:group-hover:shadow-[0_0_30px_rgba(0,255,136,0.3)] bg-background/50 transition-all duration-500 relative z-10">
                 {item.icon}
               </div>
             </div>
 
             {/* Service Designation */}
-            <h3 className="text-xs font-heading font-black text-white group-hover:text-accent transition-colors tracking-[0.2em] uppercase mb-4">
+            <h3 className="text-[8px] md:text-xs font-heading font-black text-white lg:group-hover:text-accent transition-colors tracking-[0.2em] uppercase mb-3 md:mb-4">
               {item.title}
             </h3>
 
             {/* Status Indicator */}
-            <div className="flex items-center gap-2 px-3 py-1 bg-white/5 border-2 border-white/15 rounded-full opacity-40 group-hover:opacity-100 transition-opacity">
+            <div className="flex items-center gap-2 px-2 py-0.5 md:px-3 md:py-1 bg-white/5 border border-white/10 rounded-full md:opacity-40 lg:group-hover:opacity-100 transition-opacity">
               <span className="w-1 h-1 rounded-full bg-accent animate-pulse"></span>
-              <span className="text-xs font-mono text-white tracking-widest uppercase">
+              <span className="text-[6px] md:text-[7px] font-mono text-white tracking-widest uppercase">
                 {item.status}
               </span>
             </div>
 
             {/* Bottom HUD Bar */}
-            <div className="absolute bottom-0 left-0 w-full h-px bg-linear-to-r from-transparent via-white/5 to-transparent group-hover:via-accent/40 transition-all duration-700"></div>
+            <div className="absolute bottom-0 left-0 w-full h-px bg-linear-to-r from-transparent via-accent/20 md:via-white/5 to-transparent lg:group-hover:via-accent/40 transition-all duration-700"></div>
           </div>
         ))}
       </div>
