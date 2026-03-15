@@ -23,16 +23,22 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="fixed top-0 left-1/2 -translate-x-1/2 w-full md:w-[65%] z-100 px-6 py-4 flex items-center justify-between border-b border-white/5 bg-background/60 backdrop-blur-2xl transition-all">
+      <nav className="fixed top-0 left-1/2 -translate-x-1/2 w-full md:w-[65%] z-100 px-6 py-4 flex items-center justify-between border-b border-accent/20 bg-background/60 backdrop-blur-2xl transition-all">
         <div className="flex items-center gap-6">
           <Link to="/" className="relative group">
             <div className="absolute inset-0 bg-accent/20 blur-lg opacity-0 group-hover:opacity-100 transition-opacity"></div>
-            <div className="w-10 h-10 border border-accent flex items-center justify-center cyber-chamfer-sm group cursor-pointer hover:neon-glow bg-background/50 transition-all relative z-10 overflow-hidden">
-              <img 
-                src="/images/bio-pic-png.png" 
-                alt="Logo" 
-                className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
-              />
+            <div className="w-12 h-12 flex items-center justify-center relative group cursor-pointer transition-all duration-500 hover:scale-110">
+              {/* FreshGoose83 Premium Signature */}
+              <div className="relative w-9 h-9 flex items-center justify-center">
+                {/* Outer Ring - Neon Green */}
+                <div className="absolute inset-0 border-[3px] border-transparent border-t-accent border-r-accent/30 rounded-full animate-[spin_4s_linear_infinite] shadow-[0_0_15px_rgba(0,255,136,0.5)]"></div>
+                {/* Middle Ring - Magenta/Accent-Secondary */}
+                <div className="absolute inset-[5px] border-[3px] border-transparent border-b-accent-secondary border-l-accent-secondary/30 rounded-full animate-[spin_2.5s_linear_infinite_reverse] shadow-[0_0_15px_rgba(255,0,255,0.4)]"></div>
+                {/* Inner Ring - Cyan/Accent-Tertiary */}
+                <div className="absolute inset-[10px] border-[3px] border-transparent border-t-accent-tertiary rounded-full animate-[spin_1.5s_linear_infinite] shadow-[0_0_15px_rgba(0,212,255,0.6)]"></div>
+                {/* Core Synthesis Node */}
+                <div className="w-1.5 h-1.5 bg-white rounded-full shadow-[0_0_12px_rgba(255,255,255,0.8)] animate-pulse"></div>
+              </div>
             </div>
           </Link>
 
@@ -111,7 +117,7 @@ const Navbar = () => {
           </a>
           <button 
             onClick={() => setIsOpen(!isOpen)}
-            className="text-white text-2xl focus:outline-none"
+            className="text-accent text-2xl focus:outline-none"
           >
             {isOpen ? <FaTimes /> : <FaBars />}
           </button>
