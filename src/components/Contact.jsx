@@ -6,33 +6,33 @@ const Contact = () => {
     const subject = "Project Inquiry via Portfolio";
     const body = "Hello S.M. Hasan, I would like to discuss a project with you.";
     
-    // Direct Gmail Compose URL
+    //this link goes straight to my email inbox so we can talk soon
     const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${targetEmail}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     
-    // Open in new tab
+    //opening a new window makes me feel like i am opening a door to the world
     window.open(gmailUrl, '_blank');
   };
   return (
     <section id="contact" className="py-14 relative overflow-hidden bg-gray-900/30 selection:bg-accent selection:text-black border-t border-accent/20">
       
-      {/* Premium Background Grid */}
+      {/*these little lines look like a math book i like*/}
       <div className="absolute inset-0 opacity-[0.02] pointer-events-none" 
            style={{ backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px)', backgroundSize: '50px 50px' }}>
       </div>
 
       <div className="max-w-4xl mx-auto px-6 relative z-10 flex flex-col items-center text-center">
         
-        {/* Radar Scanning Line Overlay */}
+        {/*this line scans like a big eye looking for friends*/}
         <div className="absolute top-0 left-1/2 w-px h-[100px] bg-linear-to-b from-transparent to-accent -translate-x-1/2 opacity-20 animate-[scanline_4s_linear_infinite] pointer-events-none"></div>
 
-        {/* Header HUD */}
+        {/*the top part of this box makes me feel very professional*/}
         <div className="flex items-center gap-3 mb-6 opacity-60">
            <div className="w-8 h-px bg-accent"></div>
            <span className="text-accent font-mono text-[9px] tracking-[0.4em] uppercase font-bold animate-pulse">Communication_Link</span>
            <div className="w-8 h-px bg-accent"></div>
         </div>
 
-        {/* Glitched Heading */}
+        {/*shaky letters are a bit scary but cool*/}
         <h2 className="text-3xl md:text-4xl font-heading font-black tracking-tighter uppercase text-white mb-8 cyber-glitch" 
             data-text="CONTACT">
           CONTACT
@@ -40,7 +40,7 @@ const Contact = () => {
 
         <div className="flex flex-col items-center gap-8">
           <div className="p-6 border border-white/20 hover:border-accent/50 bg-white/5 cyber-chamfer-sm inline-block backdrop-blur-md relative group transition-colors duration-500">
-             {/* Targeting Corners */}
+             {/*i put these corners on to be very neat and tidy*/}
              <div className="absolute inset-0 z-20 pointer-events-none">
                 <div className="absolute top-0 left-0 w-2 h-2 border-t border-l border-accent opacity-30 group-hover:opacity-100 transition-opacity"></div>
                 <div className="absolute top-0 right-0 w-2 h-2 border-t border-r border-accent opacity-30 group-hover:opacity-100 transition-opacity"></div>
@@ -69,7 +69,7 @@ const Contact = () => {
         </div>
       </div>
 
-      {/* Side Framework Accents */}
+      {/*these side bars keep me safe in the middle*/}
       <div className="absolute top-1/2 left-8 -translate-y-1/2 hidden lg:flex flex-col items-center gap-2 opacity-20">
          <span className="text-[6px] font-mono [writing-mode:vertical-lr] tracking-[0.5em] rotate-180">SYNC_PORT_A</span>
          <div className="w-px h-32 bg-white/20"></div>

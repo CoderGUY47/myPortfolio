@@ -24,19 +24,19 @@ const Navbar = () => {
   return (
     <>
       <nav className="fixed top-0 left-1/2 -translate-x-1/2 w-full md:w-[65%] z-100 px-6 py-4 flex items-center justify-between border-b border-accent/20 bg-background/60 backdrop-blur-2xl transition-all">
-        <div className="flex items-center gap-6">
+        <div className="flex items-center gap-6 mt-2 md:mt-4">
           <Link to="/" className="relative group">
             <div className="absolute inset-0 bg-accent/20 blur-lg opacity-0 group-hover:opacity-100 transition-opacity"></div>
             <div className="w-12 h-12 flex items-center justify-center relative group cursor-pointer transition-all duration-500 hover:scale-110">
-              {/* FreshGoose83 Premium Signature */}
+              {/*this logo makes me feel so proud and happy*/}
               <div className="relative w-9 h-9 flex items-center justify-center">
-                {/* Outer Ring - Neon Green */}
+                {/*i hope this green circle spins like my dreams*/}
                 <div className="absolute inset-0 border-[3px] border-transparent border-t-accent border-r-accent/30 rounded-full animate-[spin_4s_linear_infinite] shadow-[0_0_15px_rgba(0,255,136,0.5)]"></div>
-                {/* Middle Ring - Magenta/Accent-Secondary */}
-                <div className="absolute inset-[5px] border-[3px] border-transparent border-b-accent-secondary border-l-accent-secondary/30 rounded-full animate-[spin_2.5s_linear_infinite_reverse] shadow-[0_0_15px_rgba(255,0,255,0.4)]"></div>
-                {/* Inner Ring - Cyan/Accent-Tertiary */}
-                <div className="absolute inset-[10px] border-[3px] border-transparent border-t-accent-tertiary rounded-full animate-[spin_1.5s_linear_infinite] shadow-[0_0_15px_rgba(0,212,255,0.6)]"></div>
-                {/* Core Synthesis Node */}
+                {/*this pink color is very beautiful and bright*/}
+                <div className="absolute inset-[5px] border-[3px] border-transparent border-b-accent/50 border-l-accent/50 rounded-full animate-[spin_2.5s_linear_infinite_reverse] shadow-[0_0_15px_rgba(255,0,255,0.4)]"></div>
+                {/*blue color makes me think of the sky*/}
+                <div className="absolute inset-[10px] border-[3px] border-transparent border-t-accent/20 border-r-accent/20 rounded-full animate-[spin_1.5s_linear_infinite] shadow-[0_0_15px_rgba(0,212,255,0.6)]"></div>
+                {/*this little dot is the heart of my work*/}
                 <div className="w-1.5 h-1.5 bg-white rounded-full shadow-[0_0_12px_rgba(255,255,255,0.8)] animate-pulse"></div>
               </div>
             </div>
@@ -60,7 +60,7 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Desktop Links */}
+        {/*these buttons help people find where to go*/}
         <div className="hidden md:flex items-center gap-2">
           {links.map((link) => (
             link.isRoute ? (
@@ -107,7 +107,7 @@ const Navbar = () => {
           </a>
         </div>
 
-        {/* Mobile Controls */}
+        {/*buttons for phones so everyone can see*/}
         <div className="flex md:hidden items-center gap-4">
           <a
             href={isHome ? "#contact" : "/#contact"}
@@ -124,7 +124,7 @@ const Navbar = () => {
         </div>
       </nav>
 
-      {/* Mobile Menu Overlay */}
+      {/*this menu hides and shows like a secret*/}
       <div className={`fixed inset-0 z-90 bg-background/95 backdrop-blur-xl md:hidden transition-all duration-500 ${isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
         <div className="flex flex-col items-center justify-center h-full gap-8">
           {links.map((link) => (

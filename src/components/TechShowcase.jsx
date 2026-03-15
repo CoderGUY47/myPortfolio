@@ -29,7 +29,7 @@ const TechShowcase = () => {
 
   return (
     <section className="py-24 px-6 relative overflow-hidden">
-      {/* Background Matrix Sync */}
+      {/*this repeating background makes me feel like i am in the matrix*/}
       <div
         className="absolute inset-0 bg-repeat opacity-[0.02] pointer-events-none"
         style={{
@@ -40,7 +40,7 @@ const TechShowcase = () => {
       ></div>
 
       <div className="max-w-7xl mx-auto relative z-10">
-        {/* Premium Core Heading */}
+        {/*the top words that make my work look very professional*/}
         <div className="flex flex-col items-center mb-24 text-center">
           <div className="flex items-center gap-3 mb-4 opacity-50">
             <div className="w-8 h-px bg-accent-tertiary"></div>
@@ -52,14 +52,14 @@ const TechShowcase = () => {
           <h2 className="text-3xl md:text-4xl font-heading font-black text-white uppercase tracking-tighter drop-shadow-2xl">
             ENGINEERING STANDARDS
           </h2>
-          {/* Advanced Cybernetic Alignment Underline */}
+          {/*this glowing line is like a guiding light for my system*/}
           <div className="flex items-center justify-center w-full max-w-md mt-8 opacity-90">
-            {/* Left Beam (Shoots outward to the left) */}
+            {/*the light beam travels to the left side*/}
             <div className="flex-1 h-px bg-linear-to-r from-transparent to-accent/20 relative overflow-hidden rotate-180 cyber-chamfer">
               <div className="absolute inset-0 w-[200%] bg-linear-to-r from-transparent via-accent to-transparent animate-[sweep_2s_ease-in-out_infinite]"></div>
             </div>
 
-            {/* Core Synchronization Node */}
+            {/*everything meets right here in the center*/}
             <div className="mx-4 flex items-center gap-2">
               <div className="w-1 h-3 bg-accent/50 -skew-x-12"></div>
               <div className="relative w-3 h-3 flex items-center justify-center border border-accent rotate-45 shadow-neon">
@@ -69,7 +69,7 @@ const TechShowcase = () => {
               <div className="w-1 h-3 bg-accent/50 skew-x-12"></div>
             </div>
 
-            {/* Right Beam (Shoots outward to the right) */}
+            {/*the light beam travels to the right side*/}
             <div className="flex-1 h-px bg-linear-to-r from-transparent to-accent/20 relative overflow-hidden cyber-chamfer">
               <div className="absolute inset-0 w-[200%] bg-linear-to-r from-transparent via-accent to-transparent animate-[sweep_2s_ease-in-out_infinite]"></div>
             </div>
@@ -77,18 +77,18 @@ const TechShowcase = () => {
         </div>
 
         <div className="flex flex-col lg:flex-row items-center gap-20">
-          {/* Left: Architecture Matrix */}
+          {/*the left side holds all the strong building blocks*/}
           <div className="flex-1 w-full space-y-10">
             {architectures.map((item, i) => (
               <div
                 key={i}
                 className="group relative flex gap-6 p-6 border border-white/5 bg-background/50 hover:bg-card/40 hover:border-accent-tertiary/30 cyber-chamfer-sm transition-all duration-700"
               >
-                {/* Visual Connector Line */}
+                {/*this small line connects my ideas together*/}
                 <div className="absolute left-10 top-full h-10 w-px bg-white/5 group-hover:bg-accent-tertiary/20 last:hidden transition-colors"></div>
 
                 <div className="relative">
-                  {/* Outer Ring */}
+                  {/*a light ring that grows when you look at it*/}
                   <div className="absolute inset-0 border border-accent-tertiary/20 rounded-full scale-50 opacity-0 group-hover:scale-[2.5] group-hover:opacity-100 transition-all duration-700 pointer-events-none"></div>
                   <div className="w-10 h-10 border border-white/10 flex items-center justify-center text-foreground/40 text-lg group-hover:text-accent-tertiary group-hover:border-accent-tertiary transition-all duration-500 bg-background z-10 relative">
                     {item.icon}
@@ -104,7 +104,7 @@ const TechShowcase = () => {
                   </p>
                 </div>
 
-                {/* Status Bar */}
+                {/*this tiny blinking light tells me everything is okay*/}
                 <div className="absolute right-6 top-6 flex items-center gap-2 opacity-30 group-hover:opacity-100 transition-opacity">
                   <div className="w-1.5 h-1.5 bg-accent-tertiary rounded-full animate-pulse"></div>
                   <span className="text-[7px] font-mono text-accent-tertiary uppercase tracking-widest">
@@ -115,16 +115,16 @@ const TechShowcase = () => {
             ))}
           </div>
 
-          {/* Right: Premium CLI Simulator */}
+          {/*the right side looks like a secret computer screen*/}
           <div className="flex-1 w-full perspective-[1000px]">
             <Parallax speed={-0.08} className="w-full">
-              {/* 3D Tilt Container */}
+              {/*this box moves when i look around the screen*/}
               <div className="relative transform-gpu transition-all duration-1000 hover:rotate-y-[-5deg] hover:rotate-x-[5deg] hover:shadow-[0_0_80px_rgba(0,212,255,0.1)]">
-                {/* Glow Drop Shadow */}
+                {/*the shadow makes the box look like it is glowing*/}
                 <div className="absolute inset-0 bg-accent-tertiary/5 blur-[50px] -z-10 rounded-full"></div>
 
                 <div className="bg-black/80 border border-accent-tertiary/30 cyber-chamfer-sm overflow-hidden relative group backdrop-blur-xl">
-                  {/* CLI Header Bar */}
+                  {/*the top part of the secret computer screen*/}
                   <div className="bg-white/5 px-6 py-3 flex items-center justify-between border-b border-accent-tertiary/20 backdrop-blur-md">
                     <div className="flex items-center gap-4">
                       <FaTerminal className="text-accent-tertiary text-xs" />
@@ -139,7 +139,7 @@ const TechShowcase = () => {
                     </div>
                   </div>
 
-                  {/* Code Window */}
+                  {/*this is where the magic words are written*/}
                   <div className="p-8 font-mono text-xs md:text-sm leading-relaxed overflow-x-auto selection:bg-accent-tertiary selection:text-black">
                     <pre className="text-foreground/60 relative">
                       <code className="block w-full">
@@ -183,7 +183,7 @@ const TechShowcase = () => {
                         </div>
                         <div className="mt-4 hover:bg-white/5 px-2 -mx-2 rounded transition-colors duration-300">
                           <span className="text-foreground/30">
-                            // EXECUTING NEURAL COMPILATION...
+                            //making the computer brain think really hard...
                           </span>
                         </div>
                         <div className="hover:bg-white/5 px-2 -mx-2 rounded transition-colors duration-300">
@@ -203,7 +203,7 @@ const TechShowcase = () => {
                     </pre>
                   </div>
 
-                  {/* Scanning Laser Line */}
+                  {/*a laser scans up and down to check my work*/}
                   <div className="absolute top-0 left-0 w-full h-[2px] bg-accent-tertiary/40 shadow-[0_0_15px_rgba(0,212,255,0.8)] -translate-y-full animate-[scan_2s_ease-in-out_infinite] pointer-events-none z-50"></div>
                 </div>
               </div>

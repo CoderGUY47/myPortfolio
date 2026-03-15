@@ -13,7 +13,7 @@ const ServiceCard = ({ item }) => {
 
   return (
     <div className="group relative p-6 md:p-10 bg-gray-900/20 border border-accent md:border-white/15 cyber-chamfer-sm transition-all duration-700 lg:hover:border-accent/40 lg:hover:bg-card/40 flex flex-col items-center text-center overflow-hidden h-full">
-      {/* Background Kinetic Circuitry (Hover Only) */}
+      {/*this green dots move around when i touch*/}
       <div
         className="absolute inset-0 opacity-5 md:opacity-0 lg:group-hover:opacity-[0.03] transition-opacity duration-700 pointer-events-none"
         style={{
@@ -22,12 +22,12 @@ const ServiceCard = ({ item }) => {
         }}
       ></div>
 
-      {/* Corner ID Label - Persistent on Mobile */}
+      {/*this little code tells me which part this is*/}
       <div className="absolute top-2 left-2 md:top-4 md:left-4 text-[6px] md:text-[7px] font-mono text-accent md:text-white/10 lg:group-hover:text-accent transition-colors">
         {item.id}
       </div>
 
-      {/* Icon Protocol Container */}
+      {/*this box holds the pictures i like*/}
       <div className="relative mb-4 md:mb-8">
         <div className="absolute inset-0 bg-accent/20 blur-xl md:opacity-0 lg:group-hover:opacity-100 transition-opacity"></div>
         <div className="w-12 h-12 md:w-16 md:h-16 border border-accent md:border-white/10 flex items-center justify-center text-xl md:text-2xl text-accent md:text-foreground/20 lg:group-hover:text-accent lg:group-hover:border-accent lg:group-hover:shadow-[0_0_30px_rgba(0,255,136,0.3)] bg-background/50 transition-all duration-500 relative z-10">
@@ -35,12 +35,12 @@ const ServiceCard = ({ item }) => {
         </div>
       </div>
 
-      {/* Service Designation */}
+      {/*what this part of my work is called*/}
       <h3 className="text-[10px] md:text-sm font-heading font-black text-white lg:group-hover:text-accent transition-colors tracking-[0.2em] uppercase mb-3 md:mb-4">
         {item.title}
       </h3>
 
-      {/* Status Indicator */}
+      {/*i pulse to show that i am working hard*/}
       <div className="flex items-center gap-2 px-2 py-0.5 md:px-3 md:py-1 bg-white/5 border border-white/10 rounded-full md:opacity-40 lg:group-hover:opacity-100 transition-opacity mb-4">
         <span className="w-1 h-1 rounded-full bg-accent animate-pulse"></span>
         <span className="text-[6px] md:text-[7px] font-mono text-white tracking-widest uppercase">
@@ -48,7 +48,7 @@ const ServiceCard = ({ item }) => {
         </span>
       </div>
 
-      {/* Service Description with See More Logic */}
+      {/*more words about what i do for you*/}
       <div className="flex flex-col items-center">
         <p className={`text-[8px] md:text-xs font-mono text-white/60 lg:group-hover:text-accent transition-all duration-300 tracking-[0.2em] uppercase mb-2 ${!isExpanded ? 'line-clamp-2 md:line-clamp-none' : 'line-clamp-none'}`}>
           {item.description}
@@ -64,7 +64,7 @@ const ServiceCard = ({ item }) => {
         </button>
       </div>
 
-      {/* Bottom HUD Bar */}
+      {/*this line at the bottom looks very neat*/}
       <div className="absolute bottom-0 left-0 w-full h-px bg-linear-to-r from-transparent via-accent/20 md:via-white/5 to-transparent lg:group-hover:via-accent/40 transition-all duration-700"></div>
     </div>
   );
@@ -118,7 +118,7 @@ const Capabilities = () => {
 
   return (
     <section id="services" className="py-24 relative overflow-hidden">
-      {/* Premium HUD Header */}
+      {/*top part of this page makes me feel ready*/}
       <div className="flex flex-col items-center mb-16 text-center px-6">
         <div className="flex items-center gap-3 mb-4 opacity-50">
           <div className="w-8 h-px bg-accent"></div>
@@ -131,7 +131,7 @@ const Capabilities = () => {
           SERVICES
         </h2>
 
-        {/* Advanced Cybernetic Alignment Underline */}
+        {/*this line is like a shining road*/}
         <div className="flex items-center justify-center w-full max-w-md mb-8 opacity-90">
           <div className="flex-1 h-px bg-linear-to-r from-transparent to-accent/20 relative overflow-hidden rotate-180 cyber-chamfer">
             <div className="absolute inset-0 w-[200%] bg-linear-to-r from-transparent via-accent to-transparent animate-[sweep_2s_ease-in-out_infinite]"></div>
@@ -156,7 +156,7 @@ const Capabilities = () => {
         </div>
       </div>
 
-      {/* High-End Services Grid */}
+      {/*all my skills are in this big box*/}
       <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-8 px-4 md:px-0 auto-rows-fr">
         {services.map((item, i) => (
           <ServiceCard key={i} item={item} />

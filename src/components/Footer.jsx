@@ -16,7 +16,7 @@ const Footer = () => {
     <footer className="py-12 mt-24 border-t border-white/5 relative bg-background">
       <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
         
-        {/* Brand */}
+        {/*my name is at the bottom too because i am proud of this work*/}
         <div className="flex flex-col items-center md:items-start group cursor-default">
           <Link to="/" className="text-xl font-heading font-black tracking-widest uppercase text-white group-hover:text-accent transition-colors">
             S.M.HASAN
@@ -26,14 +26,14 @@ const Footer = () => {
           </span>
         </div>
 
-        {/* Navigation Links */}
+        {/*little buttons to go to other places on my site*/}
         <div className="flex flex-wrap justify-center gap-6 md:gap-8 text-[10px] font-mono tracking-[0.2em] text-foreground/50 uppercase">
           <Link to="/about" className="hover:text-accent transition-colors">About</Link>
           <a href={getLinkHref("#projects")} className="hover:text-accent transition-colors">Projects</a>
           <Link to="/feedback" className="hover:text-accent transition-colors">Feedback</Link>
         </div>
 
-        {/* Copyright */}
+        {/*this part says that this work is mine and i care for it*/}
         <div className="text-[9px] font-mono text-white/30 tracking-[0.2em] uppercase flex items-center gap-2">
            <span className="text-accent">©</span> {currentYear} ALL RIGHTS RESERVED
         </div>

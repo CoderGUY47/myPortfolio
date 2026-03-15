@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-// This is a "Schema" - it tells MongoDB what our feedback data should look like
+//this tells the memory box what our happy words should look like
 const feedbackSchema = new mongoose.Schema({
   username: {
     type: String,
@@ -22,7 +22,7 @@ const feedbackSchema = new mongoose.Schema({
   },
 });
 
-// Create the model based on the schema
+//now we make the shape for our words so they fit perfectly
 const Feedback = mongoose.model('Feedback', feedbackSchema);
 
 export default Feedback;

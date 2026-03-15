@@ -7,7 +7,7 @@ import {
 } from 'react-icons/fa';
 
 const AboutMe = () => {
-  // Scroll to top on mount
+  //this helps me see the top of the page when i arrive here and it makes me feel fresh
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -21,14 +21,14 @@ const AboutMe = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground selection:bg-accent selection:text-background py-24 px-6 relative overflow-hidden">
-      {/* Background Decorative Elements */}
+      {/*these colors in the back make the page look like a dream*/}
       <div className="fixed inset-0 pointer-events-none opacity-20">
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent/5 blur-[120px] rounded-full"></div>
         <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-accent-secondary/5 blur-[120px] rounded-full"></div>
       </div>
 
       <div className="max-w-5xl mx-auto relative z-10">
-        {/* Navigation / Header */}
+        {/*this part helps me find my way back home*/}
         <div className="flex items-center justify-between mb-16 border-b border-white/5 pb-8">
           <Link to="/" className="group flex items-center gap-3 text-accent hover:text-white transition-all duration-300">
             <div className="w-10 h-10 border border-accent/30 flex items-center justify-center cyber-chamfer-xs group-hover:bg-accent group-hover:text-black transition-all">
@@ -48,7 +48,7 @@ const AboutMe = () => {
           </div>
         </div>
 
-        {/* Hero Section */}
+        {/*this is the part where i tell you who i am*/}
         <div className="grid lg:grid-cols-[1.5fr_1fr] gap-16 items-start mb-24">
           <div>
             <span className="text-accent font-mono text-[10px] tracking-[0.5em] block mb-4 uppercase">
@@ -105,7 +105,7 @@ const AboutMe = () => {
           </div>
         </div>
 
-        {/* Skill Matrix - Bento Grid Inspiration */}
+        {/*all the things i can do are in these boxes*/}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-24">
           <div className="p-8 border border-white/5 bg-white/2 cyber-chamfer-sm group hover:border-accent/40 transition-all">
              <FaPaintBrush className="text-accent text-3xl mb-6 group-hover:scale-110 transition-transform" />
@@ -137,7 +137,7 @@ const AboutMe = () => {
           </div>
         </div>
 
-        {/* Detailed Bio / Experience Philosophy */}
+        {/*this is how i think about making good things*/}
         <div className="border border-white/5 bg-white/1 p-10 cyber-chamfer-sm mb-24 relative overflow-hidden group">
            <div className="absolute top-0 right-0 w-32 h-32 bg-accent/5 -rotate-45 translate-x-12 -translate-y-12"></div>
            <h2 className="text-2xl font-heading font-black uppercase text-white mb-8 flex items-center gap-4">
@@ -154,7 +154,7 @@ const AboutMe = () => {
            </div>
         </div>
 
-        {/* Call to Action Matrix - High Interactivity */}
+        {/*come and talk to me i would be so happy*/}
         <section className="mb-24">
           <div className="flex flex-col items-center mb-10 text-center">
             <span className="text-accent font-mono text-[10px] tracking-[0.4em] uppercase font-bold mb-2 opacity-60 animate-pulse">
@@ -166,7 +166,7 @@ const AboutMe = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
-            {/* LinkedIn Uplink */}
+            {/*this button connects our work lives*/}
             <a 
               href="https://www.linkedin.com/in/dev-s-hasan/" 
               target="_blank" 
@@ -184,7 +184,7 @@ const AboutMe = () => {
               </div>
             </a>
 
-            {/* Email / Gmail Uplink */}
+            {/*send me a letter through the computer*/}
             <div 
               onClick={() => {
                 const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=s.m.hasan4599@gmail.com&su=Project%20Inquiry%20from%20Portfolio&body=Hello%20S.M.%20Hasan,%20I%20would%20like%20to%20discuss%20a%20project%20with%20you.`;
@@ -203,7 +203,7 @@ const AboutMe = () => {
               </div>
             </div>
 
-            {/* GitHub Source Uplink */}
+            {/*see all the code i wrote with my hands*/}
             <a 
               href="https://github.com/coderguy47" 
               target="_blank" 
@@ -224,7 +224,7 @@ const AboutMe = () => {
         </section>
       </div>
       
-      {/* Decorative HUD Details */}
+      {/*little codes on the side to look cool*/}
       <div className="fixed top-12 right-12 font-mono text-[8px] text-white/10 uppercase tracking-[0.5em] vertical-text hidden xl:block">
          IDENTITY_SUBSTRATE_VER_2.4
       </div>

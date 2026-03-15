@@ -29,7 +29,7 @@ const SkillBar = ({ name, icon, percentage }) => {
           <span className="text-lg md:text-xl text-accent lg:text-accent/60 lg:group-hover:text-accent transition-all duration-500">
             {icon}
           </span>
-          {/* CHANGE FONT STYLE & SIZE HERE: Use Tailwind classes like text-sm, text-xs, font-black, italic, etc. */}
+          {/*you can change how the words look right here*/}
           <span className="text-[10px] md:text-sm font-heading font-black text-white uppercase tracking-widest whitespace-nowrap">
             {name}
           </span>
@@ -74,7 +74,7 @@ const TechStack = () => {
 
   return (
     <section className="py-12 relative overflow-hidden px-4 md:px-6 lg:px-10">
-      {/* Industrial Section Header */}
+      {/*the top of this section looks like a strong machine*/}
       <div className="flex flex-col items-center mb-10 text-center">
         <div className="flex items-center gap-3 mb-4">
           <span className="text-accent font-mono text-xs tracking-[0.4em] uppercase font-bold animate-pulse">
@@ -84,7 +84,7 @@ const TechStack = () => {
         <h2 className="text-2xl md:text-3xl font-heading font-black uppercase tracking-tighter text-white">
           Technical Skills
         </h2>
-        {/* Advanced Cybernetic Alignment Underline */}
+        {/*this glowing line is like a guiding light for my skills*/}
         <div className="flex items-center justify-center w-full max-w-md mt-4 opacity-90">
           <div className="flex-1 h-px bg-linear-to-r from-transparent to-accent/20 relative overflow-hidden rotate-180 cyber-chamfer">
             <div className="absolute inset-0 w-[200%] bg-linear-to-r from-transparent via-accent to-transparent animate-[sweep_2s_ease-in-out_infinite]"></div>
@@ -124,7 +124,7 @@ const TechStack = () => {
           )}
         </div>
 
-        {/* See More Trigger */}
+        {/*press this to see more of what i can do*/}
         <div className="mt-8 flex justify-center">
            <button 
              onClick={() => setShowAll(!showAll)}

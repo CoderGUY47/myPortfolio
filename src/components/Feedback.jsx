@@ -9,7 +9,7 @@ const Feedback = () => {
   const [isSent, setIsSent] = useState(false);
   const [feedbacks, setFeedbacks] = useState([]);
 
-  // Load existing feedbacks from MongoDB
+  //getting all the kind words from the computer memory far away
   useEffect(() => {
     window.scrollTo(0, 0);
     fetchFeedbacks();
@@ -22,7 +22,7 @@ const Feedback = () => {
       setFeedbacks(data);
     } catch (error) {
       console.error('Error fetching data:', error);
-      // Fallback to localStorage if API fails
+      //if the computer is tired i search in its small local pocket
       const stored = localStorage.getItem('portfolio_feedbacks');
       if (stored) setFeedbacks(JSON.parse(stored));
     }
@@ -58,7 +58,7 @@ const Feedback = () => {
       }
     } catch (error) {
       console.error('Error posting feedback:', error);
-      // Local fallback if server is down
+      //fallback to the small pocket because the big machine is resting
       const localFeedback = { ...newFeedback, id: Date.now(), date: 'Local_Mode' };
       const updated = [localFeedback, ...feedbacks];
       setFeedbacks(updated);
@@ -72,14 +72,14 @@ const Feedback = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground selection:bg-accent selection:text-background py-24 px-6 relative overflow-hidden">
-      {/* Background HUD Accents */}
+      {/*these colors in the back make me feel like i am in space*/}
       <div className="fixed inset-0 pointer-events-none opacity-20">
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent/5 blur-[120px] rounded-full"></div>
         <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-accent-secondary/5 blur-[120px] rounded-full"></div>
       </div>
 
       <div className="max-w-5xl mx-auto relative z-10">
-        {/* Navigation / Header */}
+        {/*this part helps me find my way or see how many people like me*/}
         <div className="flex items-center justify-between mb-16 border-b border-white/5 pb-8">
           <Link to="/" className="group flex items-center gap-3 text-accent hover:text-white transition-all duration-300">
             <div className="w-10 h-10 border border-accent/30 flex items-center justify-center cyber-chamfer-xs group-hover:bg-accent group-hover:text-black transition-all">
@@ -108,15 +108,15 @@ const Feedback = () => {
           </p>
         </div>
 
-        {/* Input Matrix */}
+        {/*the big box where you can put your thoughts*/}
         <div className="max-w-3xl mx-auto w-full bg-white/2 border border-white/10 p-8 md:p-12 cyber-chamfer-sm relative group mb-24">
-           {/* Decorative Corners */}
+           {/*corners make the box look very strong and safe*/}
            <div className="absolute top-0 left-0 w-8 h-8 border-t border-l border-accent/20 group-hover:border-accent group-hover:w-12 transition-all duration-500"></div>
            <div className="absolute bottom-0 right-0 w-8 h-8 border-b border-r border-accent/20 group-hover:border-accent group-hover:h-12 transition-all duration-500"></div>
 
            <form onSubmit={handleSubmit} className="space-y-8">
               <div className="grid md:grid-cols-2 gap-8">
-                 {/* Username Input */}
+                 {/*tell me your name so i can be your friend*/}
                  <div className="relative group/field">
                     <div className="absolute left-4 top-1/2 -translate-y-1/2 flex items-center gap-2 opacity-30 group-focus-within/field:opacity-100 group-focus-within/field:text-accent transition-all">
                        <FaUser className="text-xs" />
@@ -131,7 +131,7 @@ const Feedback = () => {
                     />
                  </div>
 
-                 {/* Star Rating Matrix */}
+                 {/*give me some gold stars if i did a good job*/}
                  <div className="flex items-center justify-between px-4 border border-white/10 bg-background/30">
                     <span className="text-[9px] font-mono text-white/30 uppercase tracking-widest">Rating</span>
                     <div className="flex gap-2">
@@ -149,7 +149,7 @@ const Feedback = () => {
                  </div>
               </div>
 
-              {/* Feedback Input Node */}
+              {/*write your feelings in this big empty space*/}
               <div className="relative">
                  <div className="absolute left-0 top-0 p-4 opacity-20 group-focus-within:opacity-100 transition-opacity">
                     <FaQuoteLeft className="text-accent text-xl" />
@@ -163,7 +163,7 @@ const Feedback = () => {
                  />
               </div>
 
-              {/* Transmit Command */}
+              {/*push this button to send your love to me*/}
               <button
                  type="submit"
                  className="w-full group relative py-4 bg-accent text-black font-heading font-black text-xs uppercase tracking-[0.3em] overflow-hidden cyber-chamfer-xs transition-all hover:brightness-110 active:scale-[0.98]"
@@ -177,7 +177,7 @@ const Feedback = () => {
            </form>
         </div>
 
-        {/* Feedback Feed Section */}
+        {/*this is where everyone's happy words stay together*/}
         <div className="max-w-4xl mx-auto w-full">
            <div className="flex items-center gap-4 mb-12">
               <h3 className="text-xl font-heading font-black text-white uppercase tracking-tighter">Public_Feed</h3>

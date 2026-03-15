@@ -54,11 +54,11 @@ const Protocol = () => {
       ref={sectionRef}
       className="py-24 px-6 relative bg-background overflow-hidden"
     >
-      {/* Ambient Glow */}
+      {/*this light in the back is like a soft moon*/}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent/5 blur-[120px] rounded-full pointer-events-none"></div>
 
       <div className="max-w-5xl mx-auto flex flex-col items-center relative z-10">
-        {/* Elite Heading Section */}
+        {/*the top of my school story starts here*/}
         <div className="text-center mb-20 flex flex-col items-center">
         <div className="inline-flex items-center gap-2 px-3 py-1 bg-accent/5 border border-accent/20 rounded-sm mb-4">
           <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse"></span>
@@ -69,14 +69,14 @@ const Protocol = () => {
           <h2 className="text-3xl md:text-4xl font-heading font-black uppercase tracking-tighter text-white">
             Educational BG
           </h2>
-          {/* Advanced Cybernetic Alignment Underline */}
+          {/*this line is very straight and strong like my heart*/}
           <div className="flex items-center justify-center w-full max-w-md mt-8 opacity-90">
-            {/* Left Beam (Shoots outward to the left) */}
+            {/*the beam goes this way*/}
             <div className="flex-1 h-px bg-linear-to-r from-transparent to-accent/20 relative overflow-hidden rotate-180 cyber-chamfer">
               <div className="absolute inset-0 w-[200%] bg-linear-to-r from-transparent via-accent to-transparent animate-[sweep_2s_ease-in-out_infinite]"></div>
             </div>
 
-            {/* Core Synchronization Node */}
+            {/*everything meets here in the middle*/}
             <div className="mx-4 flex items-center gap-2">
               <div className="w-1 h-3 bg-accent/50 -skew-x-12"></div>
               <div className="relative w-3 h-3 flex items-center justify-center border border-accent rotate-45 shadow-neon">
@@ -86,7 +86,7 @@ const Protocol = () => {
               <div className="w-1 h-3 bg-accent/50 skew-x-12"></div>
             </div>
 
-            {/* Right Beam (Shoots outward to the right) */}
+            {/*the beam goes that way*/}
             <div className="flex-1 h-px bg-linear-to-r from-transparent to-accent/20 relative overflow-hidden cyber-chamfer">
               <div className="absolute inset-0 w-[200%] bg-linear-to-r from-transparent via-accent to-transparent animate-[sweep_2s_ease-in-out_infinite]"></div>
             </div>
@@ -94,9 +94,9 @@ const Protocol = () => {
         </div>
 
         <div className="relative w-full max-w-4xl">
-          {/* Central Vertical Timeline Core */}
+          {/*this line in the middle shows the way through my years*/}
           <div className="absolute left-1/2 top-4 bottom-4 w-px bg-white/5 -translate-x-1/2 hidden md:block">
-            {/* Main scroll progress line */}
+            {/*this line grows when you scroll down*/}
             <div
               className="absolute top-0 left-0 w-full bg-accent shadow-neon transition-all duration-300 ease-out z-0"
               style={{ height: `${scrollProgress * 100}%` }}
@@ -109,7 +109,7 @@ const Protocol = () => {
                 key={step.id}
                 className={`relative flex flex-col md:flex-row items-center group ${i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}`}
               >
-                {/* Content Panel - High-End Premium Box */}
+                {/*this box is very fancy and holds my school info*/}
                 <div className="flex-1 w-full max-w-sm md:max-w-md">
                   <div
                     className={`
@@ -118,7 +118,7 @@ const Protocol = () => {
                       ${scrollProgress > i / (steps.length - 1) ? "border-accent" : ""}
                    `}
                   >
-                    {/* Corner Accents */}
+                    {/*i love these little corners*/}
                     <div className="absolute top-0 left-0 w-4 h-4 border-t border-l border-accent md:border-white/10 lg:group-hover:border-accent transition-colors duration-500"></div>
                     <div className="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-accent md:border-white/10 lg:group-hover:border-accent transition-colors duration-500"></div>
 
@@ -157,26 +157,26 @@ const Protocol = () => {
                   </div>
                 </div>
 
-                {/* Cybernetic Alignment Node */}
+                {/*this little diamond is the center of each year*/}
                 <div className="relative w-16 h-16 hidden md:flex items-center justify-center z-20">
-                  {/* Faint Glow Circle Behind */}
+                  {/*a little circle to make the diamond happy*/}
                   <div className={`absolute w-10 h-10 rounded-full border border-accent/20 bg-accent/5 transition-all duration-700 ${scrollProgress >= (i / (steps.length - 1)) - 0.15 ? 'opacity-100 scale-100 shadow-[0_0_15px_rgba(0,255,136,0.3)]' : 'opacity-0 scale-50'}`}></div>
 
-                  {/* Diamond Core */}
+                  {/*the diamond its sitting right there*/}
                   <div
                     className={`
                     w-4 h-4 rotate-45 bg-background flex items-center justify-center transition-all duration-500 relative z-10
                     ${scrollProgress >= (i / (steps.length - 1)) - 0.15 ? "border border-accent shadow-neon scale-100" : "border border-white/20 scale-75 opacity-50"}
                   `}
                   >
-                    {/* Inner Square (Counter-rotated to be horizontal/vertical) */}
+                    {/*these dots show i am still learning and growing*/}
                     <div
                       className={`w-1.5 h-1.5 bg-accent -rotate-45 transition-all duration-500 delay-150 ${scrollProgress >= (i / (steps.length - 1)) - 0.15 ? "scale-100 opacity-100" : "scale-0 opacity-0"}`}
                     ></div>
                   </div>
                 </div>
 
-                {/* Empty Side Spacer */}
+                {/*just some empty space to breathe*/}
                 <div className="flex-1 hidden md:block"></div>
               </div>
             ))}

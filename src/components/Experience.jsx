@@ -25,7 +25,7 @@ const Experience = () => {
         <h2 className="text-2xl md:text-3xl font-heading font-black uppercase tracking-tighter">
           Experience
         </h2>
-        {/* Animated Smooth Scanning Underline */}
+        {/*this moving line makes me feel like time is passing by*/}
         <div className="relative w-48 h-0.5 mt-6 overflow-hidden bg-white/5 rounded-full">
            <div className="absolute inset-0 bg-linear-to-r from-transparent via-accent-secondary to-transparent animate-[sweep_3s_linear_infinite]"></div>
         </div>
@@ -37,7 +37,7 @@ const Experience = () => {
             key={i}
             className="group relative flex flex-col md:flex-row items-start gap-6 p-6 border border-accent-secondary md:border-white/5 bg-card/20 cyber-chamfer-sm lg:hover:border-accent-secondary/40 lg:hover:bg-white/1 transition-all duration-500"
           >
-            {/* Period Sidebar */}
+            {/*this shows how long i worked at each place*/}
             <div className="md:w-1/5 flex flex-col">
               <span className="text-lg font-heading font-black text-accent-secondary group-hover:neon-text transition-all">
                 {exp.period}
@@ -47,7 +47,7 @@ const Experience = () => {
               </span>
             </div>
 
-            {/* Content Body */}
+            {/*this is the story of my working days*/}
             <div className="flex-1">
               <div className="flex flex-col mb-4">
                 <h3 className="text-xl font-heading font-black text-white uppercase tracking-wider">
@@ -62,7 +62,7 @@ const Experience = () => {
                 {exp.description}
               </p>
 
-              {/* Tag Cloud */}
+              {/*these little words show what tools i used*/}
               <div className="flex flex-wrap gap-3">
                 {exp.tech.map(t => (
                   <span 

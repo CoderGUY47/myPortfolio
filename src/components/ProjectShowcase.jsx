@@ -72,7 +72,7 @@ const ProjectShowcase = () => {
 
   return (
     <section id="projects" className="py-24 relative overflow-hidden">
-      {/* Industrial Header */}
+      {/*the top of the project page makes me feel so excited to show you*/}
       <div className="flex flex-col items-center mb-16 text-center px-6">
         <div className="inline-flex items-center gap-2 px-3 py-1 bg-accent/5 border border-accent/20 rounded-sm mb-4">
           <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse"></span>
@@ -83,7 +83,7 @@ const ProjectShowcase = () => {
         <h2 className="text-3xl md:text-4xl font-heading font-black uppercase tracking-tighter text-white">
           Projects
         </h2>
-        {/* Advanced Cybernetic Alignment Underline */}
+        {/*this glowing line is like a guiding light for our work*/}
         <div className="flex items-center justify-center w-full max-w-md mt-6 opacity-90">
           <div className="flex-1 h-px bg-linear-to-r from-transparent to-accent/20 relative overflow-hidden rotate-180 cyber-chamfer">
             <div className="absolute inset-0 w-[200%] bg-linear-to-r from-transparent via-accent to-transparent animate-[sweep_2s_ease-in-out_infinite]"></div>
@@ -102,7 +102,7 @@ const ProjectShowcase = () => {
         </div>
       </div>
 
-      {/* Bento Box Grid Container */}
+      {/*all my big builds are stored in these pretty boxes*/}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 px-6 max-w-[1200px] mx-auto auto-rows-fr lg:h-[400px]"> 
         {visibleProjects.map((project) => (
           <a
@@ -116,7 +116,7 @@ const ProjectShowcase = () => {
               flex flex-col justify-end ${project.gridClass}
             `}
           >
-            {/* Background Image with Parallax */}
+            {/*this background moves a little to look like it is alive*/}
             <div className="absolute inset-0 z-0">
               <Parallax speed={-0.1} className="w-full h-full">
                 <img
@@ -131,7 +131,7 @@ const ProjectShowcase = () => {
               </Parallax>
             </div>
 
-            {/* Targeting Overlays - Persistent on Mobile */}
+            {/*these corners show you where the important things are*/}
             <div className="absolute inset-0 z-20 pointer-events-none opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-700">
               <div className="absolute top-4 left-4 w-4 h-4 border-t border-l border-accent"></div>
               <div className="absolute top-4 right-4 w-4 h-4 border-t border-r border-accent"></div>
@@ -139,21 +139,21 @@ const ProjectShowcase = () => {
               <div className="absolute bottom-4 right-4 w-4 h-4 border-b border-r border-accent"></div>
             </div>
 
-            {/* Metadata Tags */}
+            {/*this small tag tells me which project number it is*/}
             <div className="absolute top-4 left-4 z-30">
               <span className="text-[8px] md:text-[10px] font-heading font-black text-accent tracking-[0.2em] bg-black/60 px-2 py-1 backdrop-blur-sm border border-accent/20">
                 {project.id}
               </span>
             </div>
 
-            {/* Hover Action Blur Overlay */}
+            {/*when you touch the box i show you a secret path to the site*/}
             <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center gap-4 backdrop-blur-sm z-40">
               <div className="p-3 bg-accent text-black scale-110 active:scale-95 transition-all cyber-chamfer-sm shadow-neon">
                 <FaExternalLinkAlt />
               </div>
             </div>
 
-            {/* Text Overlay */}
+            {/*words about my project that make me feel good*/}
             <div className="relative z-10 w-full p-4 md:p-6 bg-linear-to-t from-black via-black/90 to-transparent pt-16 pointer-events-none">
               <h3 className="text-sm md:text-lg font-heading font-black text-white uppercase tracking-tight mb-1 group-hover:text-accent transition-colors truncate drop-shadow-lg">
                 {project.title}
@@ -163,7 +163,7 @@ const ProjectShowcase = () => {
               </p>
             </div>
 
-            {/* Interactive Scanning Line */}
+            {/*this line scans up and down like a robot looking for fun*/}
             <div className="absolute top-0 left-0 w-full h-[2px] bg-accent/40 shadow-[0_0_15px_rgba(0,255,136,0.8)] -translate-y-full md:group-hover:animate-[scan_3s_ease-in-out_infinite] pointer-events-none z-50"></div>
           </a>
         ))}

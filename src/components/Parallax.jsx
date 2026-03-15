@@ -11,22 +11,22 @@ const Parallax = ({ children, speed = 0.5, className = "", style = {} }) => {
       animationFrameId = requestAnimationFrame(() => {
         if (!ref.current) return;
         
-        // Calculate element's position relative to viewport
+        //finding where the box is hiding on the screen so i can follow it with my eyes
         const rect = ref.current.getBoundingClientRect();
         const viewportCenter = window.innerHeight / 2;
         const elementCenter = rect.top + rect.height / 2;
         
-        // Distance from the center of the screen
+        //counting how far away the box is from the middle of my view
         const distanceFromCenter = elementCenter - viewportCenter;
         
         setOffset(distanceFromCenter * speed);
       });
     };
 
-    // Passive listener for better performance
+    //i listen very quietly so the computer doesn't get tired while scrolling
     window.addEventListener('scroll', handleScroll, { passive: true });
     
-    // Trigger once on mount
+    //i check once at the start to make sure everything is okay
     handleScroll();
     
     return () => {
@@ -41,7 +41,7 @@ const Parallax = ({ children, speed = 0.5, className = "", style = {} }) => {
         className="w-full h-full will-change-transform"
         style={{ 
           transform: `translateY(${offset}px)`, 
-          // Small transition smooths out the JS frame-rate on high refresh displays
+          //a little bit of magic to make the movement look like silk and water
           transition: 'transform 0.5s linear' 
         }}
       >

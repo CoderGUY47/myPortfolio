@@ -8,11 +8,11 @@ const Hero = () => {
       id="home"
       className="relative min-h-[85vh] pt-10 pb-6 px-6 flex flex-col items-center justify-center overflow-hidden"
     >
-      {/* Background HUD Accents */}
+      {/*this light behind is very peaceful*/}
       <div className="absolute top-[20%] left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-accent/5 blur-[100px] rounded-full pointer-events-none"></div>
 
       <div className="relative z-10 w-full max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-12">
-        {/* Persona Context - Centered on Mobile, Left on LG */}
+        {/*i center myself on small screens and sit on the left for big ones*/}
         <div className="flex-1 text-center lg:text-left flex flex-col items-center lg:items-start">
           <Parallax
             speed={0.1}
@@ -25,7 +25,7 @@ const Hero = () => {
               </span>
             </div>
 
-            {/* Name & Title Heading */}
+            {/*my name is my pride*/}
             <div className="flex flex-col mb-8 select-none items-center lg:items-start">
               <div className="relative group">
                 <h1
@@ -49,7 +49,7 @@ const Hero = () => {
               with modern frontend stacks,<br /> I ensure your web applications <br />
               <span className="text-accent-secondary font-black text-lg">
                 {" "}
-                stay fast, synchronized, and scalable.
+                stay fast, synchronized, <br />and scalable.
               </span>{" "}
               <br />
               🖇️ UNDERSTANDING YOUR expectation, <br />I CAN GET
@@ -77,22 +77,22 @@ const Hero = () => {
           </Parallax>
         </div>
 
-        {/* Persona Profile HUD - Visible only on Desktop (LG+) */}
+        {/*i show my face only to desk viewers*/}
         <div className="flex-1 relative w-full hidden lg:flex justify-center lg:justify-end group">
           <div className="relative w-full max-w-[550px] aspect-square cyber-chamfer-sm border border-accent md:border-white/5 bg-white/2 p-3 transition-all duration-700 lg:group-hover:border-accent/40 lg:group-hover:bg-white/5 lg:group-hover:shadow-[0_0_50px_rgba(0,255,136,0.1)]">
-            {/* Background Kinetic Glow */}
+            {/*this glow is like a warm hug*/}
             <div className="absolute inset-0 bg-accent/2 opacity-20 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity blur-3xl pointer-events-none"></div>
 
-            {/* Elite Corner Accents - Always visible on mobile */}
+            {/*corners help me stay in the lines*/}
             <div className="absolute top-0 left-0 w-12 h-12 border-t-2 border-l-2 border-accent lg:border-accent/20 lg:group-hover:border-accent transition-colors duration-500"></div>
             <div className="absolute bottom-0 right-0 w-12 h-12 border-b-2 border-r-2 border-accent lg:border-accent/20 lg:group-hover:border-accent transition-colors duration-500"></div>
 
-            {/* Visual Architecture Container */}
+            {/*my picture lives in this box*/}
             <div className="w-full h-full relative overflow-hidden cyber-chamfer-sm bg-background/80">
-              {/* Vertical Scanning Active Line */}
+              {/*this line moves like a heartbeat*/}
               <div className="absolute top-0 left-0 w-full h-[2px] bg-accent/40 shadow-[0_0_15px_rgba(0,255,136,0.8)] z-20 animate-[scan_4s_ease-in-out_infinite] lg:opacity-0 lg:group-hover:opacity-100 transition-opacity"></div>
 
-              {/* Targeting Brackets */}
+              {/*these brackets are looking at me*/}
               <div className="absolute inset-0 z-40 pointer-events-none">
                 <div className="absolute top-4 left-4 lg:top-8 lg:left-8 w-4 h-4 border-t border-l border-accent lg:opacity-0 lg:group-hover:opacity-100 lg:group-hover:top-4 lg:group-hover:left-4 transition-all duration-500"></div>
                 <div className="absolute top-4 right-4 lg:top-8 lg:right-8 w-4 h-4 border-t border-r border-accent lg:opacity-0 lg:group-hover:opacity-100 lg:group-hover:top-4 lg:group-hover:right-4 transition-all duration-500"></div>
@@ -100,7 +100,7 @@ const Hero = () => {
                 <div className="absolute bottom-4 right-4 lg:bottom-8 lg:right-8 w-4 h-4 border-b border-r border-accent lg:opacity-0 lg:group-hover:opacity-100 lg:group-hover:bottom-4 lg:group-hover:right-4 transition-all duration-500"></div>
               </div>
 
-              {/* Chromatic Aberration Container */}
+              {/*colors are shivering a little*/}
               <div className="w-full h-full relative">
                 <Parallax speed={-0.05} className="w-full h-full">
                   <img
@@ -111,10 +111,10 @@ const Hero = () => {
                 </Parallax>
               </div>
 
-              {/* Internal Targeting Overlay */}
+              {/*another box inside to be safe*/}
               <div className="absolute inset-4 border border-white/10 lg:border-white/5 border-dashed pointer-events-none opacity-40 lg:opacity-20 lg:group-hover:opacity-40 transition-opacity"></div>
 
-              {/* Fixed Metadata HUD Labels */}
+              {/*small notes about my life*/}
               <div className="absolute top-4 left-4 z-30 flex flex-col gap-1">
                 <span className="text-[7px] font-mono text-accent bg-background/80 px-1 border border-accent/20">
                   UPLINK_SECURE
