@@ -53,11 +53,11 @@ const AboutMe = () => {
               <p className="mb-6">
                 <span className="text-accent">&gt; init sm_hasan.profile</span><br/>
                 <span className="text-white/40">loading bio-substrate...</span><br/>
-                i am an <span className="text-white font-bold italic">ai-driven frontend engineer</span> and <span className="text-white font-bold italic">mern architect</span> dedicated to building the next generation of digital interfaces.
+                i am an <span className="text-white font-bold italic">ai-driven frontend engineer</span> and <span className="text-white font-bold italic">mern architect</span> dedicated to building <span className="text-white font-bold italic">scalable</span>, high-performance digital interfaces with full <span className="text-white font-bold italic">seo optimization</span>.
               </p>
               
               <p className="mb-6">
-                my mission is to bridge the gap between complex <span className="text-accent-secondary">ai logic</span> and high-performance <span className="text-accent-secondary">user interfaces</span>. i don't just build websites; i engineer high-fidelity digital ecosystems that are as robust as they are visually stunning.
+                my mission is to bridge the gap between complex <span className="text-accent-secondary">ai logic</span> and <span className="text-accent-secondary">scalable frontend systems</span>. i engineer high-fidelity digital ecosystems that are technically robust, search-engine optimized, and visually stunning.
               </p>
 
               <div className="grid grid-cols-2 gap-4 mt-8 opacity-60">
