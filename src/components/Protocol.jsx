@@ -60,13 +60,12 @@ const Protocol = () => {
       <div className="max-w-5xl mx-auto flex flex-col items-center relative z-10">
         {/* Elite Heading Section */}
         <div className="text-center mb-20 flex flex-col items-center">
-          <div className="flex items-center gap-3 mb-4 opacity-50">
-            <div className="w-8 h-px bg-accent"></div>
-            <span className="text-accent font-mono text-[9px] tracking-[0.4em] uppercase font-bold">
-              Foundation_Logs
-            </span>
-            <div className="w-8 h-px bg-accent"></div>
-          </div>
+        <div className="inline-flex items-center gap-2 px-3 py-1 bg-accent/5 border border-accent/20 rounded-sm mb-4">
+          <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse"></span>
+          <span className="text-xs font-mono tracking-widest text-accent uppercase font-bold">
+            Foundation_Logs
+          </span>
+        </div>
           <h2 className="text-3xl md:text-4xl font-heading font-black uppercase tracking-tighter text-white">
             Educational BG
           </h2>

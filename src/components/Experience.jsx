@@ -6,7 +6,7 @@ const Experience = () => {
       company: 'DAFFODIL_International_University',
       role: 'B.Sc. in CSE',
       period: '2021 - PRESENT',
-      description: 'Mastering algorithmic rigor via DSA and DBMS protocols. Conducting performance-based research in Web Optimization and AI accuracy, achieving 95+ Google Lighthouse standards across production-ready solutions.',
+      description: 'I am practice out in all semester to gain somethhing, then i learn web development and update myself with upcoming tech in future.',
       tech: ['DSA', 'DBMS', 'Software_Engineering', 'Web_Optimization', 'AI_Research', 'Optimization']
     },
     {
@@ -14,7 +14,7 @@ const Experience = () => {
       role: 'AI_DRIVEN_MERN_DEVELOPER',
       period: '2025 - PRESENT',
       description: 'Architecting a P2P academic marketplace substrate. Implemented Bento-grid UI protocols increasing navigation efficiency by 25%. Engineered advanced search-filter algorithms and fluid scroll-triggered animations.',
-      tech: ['MERN_STACK', 'P2P_PROTOCOL', 'BENTO_UI', 'FILTER_ALGORITHMS', 'FRAMER_MOTION', 'UI_UX']
+      tech: ['Frontend', 'HTML5', 'CSS3', 'JavaScript', 'TailwindCSS', 'Modern_UI', 'FRAMER_MOTION']
     }
   ];
 

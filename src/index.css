@@ -277,9 +277,9 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    font-weight: bold;
+    font-weight: 400;
     transform: translate(-50%, -50%);
-    font-size: 0.65rem;
+    font-size: 14px;
     color: black;
     white-space: nowrap;
     font-family: var(--font-accent);

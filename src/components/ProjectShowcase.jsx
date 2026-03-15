@@ -76,7 +76,7 @@ const ProjectShowcase = () => {
       <div className="flex flex-col items-center mb-16 text-center px-6">
         <div className="inline-flex items-center gap-2 px-3 py-1 bg-accent/5 border border-accent/20 rounded-sm mb-4">
           <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse"></span>
-          <span className="text-[9px] font-mono tracking-widest text-accent uppercase font-bold">
+          <span className="text-xs font-mono tracking-widest text-accent uppercase font-bold">
             Practicing_Projects
           </span>
         </div>

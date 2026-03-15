@@ -29,7 +29,8 @@ const SkillBar = ({ name, icon, percentage }) => {
           <span className="text-lg md:text-xl text-accent lg:text-accent/60 lg:group-hover:text-accent transition-all duration-500">
             {icon}
           </span>
-          <span className="text-[8px] md:text-xs font-heading font-black text-white uppercase tracking-widest whitespace-nowrap">
+          {/* CHANGE FONT STYLE & SIZE HERE: Use Tailwind classes like text-sm, text-xs, font-black, italic, etc. */}
+          <span className="text-[10px] md:text-sm font-heading font-black text-white uppercase tracking-widest whitespace-nowrap">
             {name}
           </span>
         </div>
@@ -52,22 +53,22 @@ const TechStack = () => {
   const coreSkills = [
     { name: "HTML5", icon: <FaHtml5 />, percentage: 70 },
     { name: "CSS3", icon: <FaCss3Alt />, percentage: 70 },
-    { name: "Javascript", icon: <FaJs />, percentage: 60 },
+    { name: "Javascript", icon: <FaJs />, percentage: 50 },
     { name: "API JSON", icon: <FaCode />, percentage: 50 },
-    { name: "React.js", icon: <FaReact />, percentage: 50 },
-    { name: "Next.js", icon: <FaCube />, percentage: 50 },
-    { name: "TailwindCSS", icon: <SiTailwindcss />, percentage: 80 },
+    { name: "React.js", icon: <FaReact />, percentage: 60 },
+    { name: "Next.js", icon: <FaCube />, percentage: 45 },
+    { name: "TailwindCSS", icon: <SiTailwindcss />, percentage: 70 },
   ];
 
   const optionalSkills = [
     { name: "Adobe Illustrator", icon: <FaPalette />, percentage: 90 },
-    { name: "MongoDB", icon: <FaDatabase />, percentage: 70 },
+    { name: "MongoDB", icon: <FaDatabase />, percentage: 40 },
     { name: "Typescript", icon: <SiTypescript />, percentage: 30 },
     { name: "Node.js", icon: <FaNodeJs />, percentage: 30 },
     { name: "Express.js", icon: <SiExpress />, percentage: 30 },
     { name: "Postman", icon: <SiPostman />, percentage: 30 },
     { name: "AI Driven", icon: <FaRobot />, percentage: 88 },
-    { name: "Python", icon: <FaPython />, percentage: 60 },
+    { name: "Python", icon: <FaPython />, percentage: 40 },
     { name: "Research", icon: <FaSearch />, percentage: 70 },
   ];
 
@@ -76,7 +77,7 @@ const TechStack = () => {
       {/* Industrial Section Header */}
       <div className="flex flex-col items-center mb-10 text-center">
         <div className="flex items-center gap-3 mb-4">
-          <span className="text-accent font-mono text-[9px] tracking-[0.4em] uppercase font-bold animate-pulse">
+          <span className="text-accent font-mono text-xs tracking-[0.4em] uppercase font-bold animate-pulse">
             // RESOURCE_RESERVORY
           </span>
         </div>
