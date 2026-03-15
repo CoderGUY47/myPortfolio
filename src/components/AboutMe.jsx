@@ -96,7 +96,7 @@ const AboutMe = () => {
                <img 
                  src="/images/bio-pic-png.png" 
                  alt="S.M. Hasan Profile" 
-                 className="w-full grayscale group-hover:grayscale-0 transition-all duration-700 hover:scale-105"
+                 className="w-full lg:grayscale lg:group-hover:grayscale-0 transition-all duration-700 hover:scale-105"
                />
                <div className="absolute top-4 right-4 bg-black/80 backdrop-blur-md border border-accent/20 px-3 py-1.5 font-mono text-[9px] text-accent font-black tracking-widest uppercase">
                   v_2.0.26_build
